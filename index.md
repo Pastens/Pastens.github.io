@@ -6,7 +6,7 @@ Briefly, We're hiring.
 
 Our team now focus on building a system for extra-scale cluster performance modeling & simulation. We're looking for people who have a strong willing to face chanllenge and have deep understanding of computer architecture (especially the OoO processor).
 
-If you'd like to know more about the position, please send your CV or question to my personal email.
+If you'd like to know more about the position, please send your CV or question to my personal email <liuhc0121 at 163.com>.
 
 ### About myself
 

@@ -1,4 +1,4 @@
-## Welcome to My Pages
+## About myself & team
 
 ### Hiring
 
@@ -10,6 +10,6 @@ If you'd like to know more about the position, please send your CV or question t
 
 ### About myself
 
-Senior Research Engineer, Fullstack.
+Haocheng Liu. Senior Research Engineer, Fullstack.
 
 6-years work experience in @Huawei. 

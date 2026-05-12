@@ -337,7 +337,6 @@ SimDataParse (多线程解析)
 ### 5.2 整体劫持架构 — 泳道图
 
 ```mermaid
-%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
 flowchart TB
     subgraph User["🧑 用户层 / 用户进程"]
         direction TB
@@ -522,7 +521,7 @@ sequenceDiagram
 
     App->>Hook: rtKernelLaunch(stubFunc, blockDim, args, argsSize, smDesc, stm)
 
-    rect rgb(20, 30, 50)
+    rect #141E32
         Note over Hook: ▸ Pre() 阶段 — 劫持前处理
         Hook->>Hook: InitParam() 保存所有参数, 生成 launchId
         Hook->>KCtx: AddLaunchEvent(stubFunc, blockDim, stm)
@@ -540,7 +539,7 @@ sequenceDiagram
         end
     end
 
-    rect rgb(40, 30, 50)
+    rect #281E32
         Note over Hook: ▸ Call() 阶段 — 原始函数调用
         alt 仿真模式 + ProfData 无需原始 launch
             Hook-->>App: 跳过 originfunc_() 直接返回
@@ -552,7 +551,7 @@ sequenceDiagram
         end
     end
 
-    rect rgb(20, 30, 50)
+    rect #141E32
         Note over Hook: ▸ Post() 阶段 — 劫持后处理
         alt 仿真模式
             Hook->>Orig: rtStreamSynchronizeOrigin(stm) 等待仿真完成

@@ -1,25 +1,26 @@
 #!/bin/bash
 # Sync Obsidian Knowledge vault → Quartz content/
-# Handles nested subdirectories recursively.
+# Preserves the full vault-relative path (Knowledge/ prefix) so
+# [[wikilinks]] resolve correctly in Quartz.
 # Run after writing new notes in Obsidian, then commit & push.
 
 set -e
 
-VAULT="/mnt/c/Users/admin/Documents/Obsidian Vault/Knowledge"
+VAULT="/mnt/c/Users/admin/Documents/Obsidian Vault"
 CONTENT=~/Pastens.github.io/content
+
+cd "$VAULT"
 
 echo "🔄 Syncing Obsidian vault → Quartz content..."
 
-# Recursively copy markdown files preserving relative structure
-cd "$VAULT"
-find . -name "*.md" -type f | while IFS= read -r file; do
+find Knowledge -name "*.md" -type f | while IFS= read -r file; do
   target="$CONTENT/$file"
   mkdir -p "$(dirname "$target")"
   cp "$VAULT/$file" "$target"
 done
 
-total=$(find "$CONTENT" -name "*.md" -type f | wc -l)
-echo "✅ Sync complete! ($total markdown files in content/)"
+total=$(find "$CONTENT/Knowledge" -name "*.md" -type f | wc -l)
+echo "✅ Sync complete! ($total markdown files in content/Knowledge/)"
 echo ""
 echo "Next steps:"
 echo "  cd $CONTENT/.."

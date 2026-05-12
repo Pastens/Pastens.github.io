@@ -896,6 +896,271 @@ flowchart LR
 5. **算子 .o 二进制解析**通过 `ParseMetaDataFromBinary` 在劫持时完成，提取 kernel 名称、参数元数据
 6. **所有五种算子方式最终汇聚到一个劫持点** — `rtKernelLaunch`，无论上层是 PyTorch、Triton 还是 catlass
 
+### 5.13 仿真器所需数据的劫持与传递全景
+
+仿真器需要以下输入才能完整执行一个算子的仿真：
+1. **Kernel Binary** — 算子编译产物的 `.o` ELF 二进制文件
+2. **Kernel Args** — 启动参数指针指向的输入/输出数据
+3. **TilingData** — 编译时生成的 tiling 配置数据（shape、split 策略等）
+4. **blockDim / TilingKey** — 并发度和 kernel 签名标识
+5. **kernel_name** — 用于在二进制中找到入口符号
+
+下面逐项分析在劫持架构中如何捕获、存储、传递。
+
+#### (a) Kernel Binary 的捕获 — `rtDevBinaryRegister` / `rtRegisterAllKernel` 劫持
+
+**时机**：算子加载阶段（launch 之前）
+
+`HijackedFuncOfDevBinaryRegister::Post()` 中保存二进制：
+```cpp
+// HijackedFuncOfDevBinaryRegister.cpp
+void HijackedFuncOfDevBinaryRegister::Pre(const rtDevBinary_t *bin, void **hdl)
+{
+    this->bin_ = bin;           // ← 保存 .o 二进制指针
+    this->hdl_ = hdl;
+}
+rtError_t HijackedFuncOfDevBinaryRegister::Post(rtError_t ret)
+{
+    // 存入 KernelContext.registerEvents_，建立 hdl↔bin 映射
+    KernelContext::Instance().AddHdlRegisterEvent(*this->hdl_, this->bin_);
+    if (IsOpProf() && ProfConfig::Instance().IsSimulator()) {
+        ProfDataCollect::SaveObject(*this->hdl_); // ← 仿真模式下立即落盘
+    }
+    return ret;
+}
+```
+
+**存储位置**：`KernelContext::RegisterEvent` 结构体：
+```cpp
+struct RegisterEvent {
+    const KernelHandle *hdl;           // 二进制句柄
+    rtDevBinary_t bin;                 // 原始二进制数据 (.o)
+    const rtDevBinary_t *stubBin;      // 动态插桩后的二进制
+    std::vector<std::string> kernelNames; // 从 ELF 符号表提取的 kernel 名列表
+    std::vector<uint8_t> binData;      // 二进制数据的拷贝
+};
+```
+
+`KernelContext` 内部维护两个映射表：
+| 映射 | 映射方向 | 用途 |
+|------|---------|------|
+| `hdlToRegId_` | KernelHandle* → registerId | 通过 hdl 反查注册索引 |
+| `registerEvents_` | registerId → RegisterEvent | 获取二进制数据和 kernel 名 |
+
+**落盘**：仿真模式下，`ProfDataCollectWithSimulator::SaveObject()` 在注册瞬间调用 `DumpKernelObject()`，将 `.o` 二进制写入临时路径，文件名以时间戳命名，最终在 `ProfInit` 时拷贝为 `aicore_binary.o`。
+
+#### (b) Kernel Args 的捕获 — `rtKernelLaunch` / `rtKernelLaunchWithHandleV2` 劫持
+
+**时机**：每次 kernel launch 调用
+
+`HijackedFuncOfKernelLaunch::InitParam()` 中捕获所有 launch 参数：
+```cpp
+// HijackedFuncOfKernelLaunch.cpp
+refreshParamFunc_ = [this, stubFunc, blockDim, args, argsSize, smDesc, stm]() {
+    this->stubFunc_  = stubFunc;   // ← kernel 入口函数指针（用于反查二进制）
+    this->blockDim_  = blockDim;   // ← 并发核数
+    this->args_      = args;       // ← 参数指针（device 侧，包含 input/tiling 地址）
+    this->argsSize_  = argsSize;   // ← 参数字节数
+    this->smDesc_    = smDesc;     // ← 共享内存描述符
+    this->stm_       = stm;        // ← stream 句柄
+};
+```
+
+对于 `rtKernelLaunchWithHandleV2`（PyTorch/Triton 走此路径），额外捕获：
+```cpp
+// HijackedFuncOfKernelLaunchWithHandleV2.cpp
+this->hdl_       = hdl;           // ← 二进制 handle
+this->tilingKey_ = tilingKey;     // ← tiling key（从 kernelName 编码/或直传）
+this->argsInfo_  = argsInfo;      // ← rtArgsEx_t 结构体（包含 args + 偏移量）
+this->cfgInfo_   = cfgInfo;       // ← rtTaskCfgInfo_t（可选配置）
+```
+
+**关键结构体** — `KernelContext::LaunchEvent`：
+```cpp
+struct LaunchEvent {
+    const StubFunc *stubFunc;      // rtKernelLaunch 用：stub 函数指针
+    const KernelHandle *hdl;       // rtKernelLaunchWithHandleV2 用：二进制 handle
+    uint64_t tilingKey;            // tilingKey
+    uint64_t pcStartAddr;          // PC 起始地址（后续计算）
+    const rtArgsEx_t *argsInfo;    // args 信息（含 tiling 偏移）
+    uint32_t blockDim;             // 并发核数
+    std::string kernelName;        // kernel 名
+    rtArgsEx_t argsInfoCopy;       // argsInfo 的深拷贝
+    bool isSink;                   // 下沉图模式标记
+    bool launchWithHandle;         // 是否走 HandleV2 路径
+};
+```
+
+#### (c) TilingData 的提取与落盘
+
+TilingData 嵌入在 `rtArgsEx_t.args` 中。提取路径在 `DumpTilingData()` 函数（`KernelContext.cpp`）：
+
+```cpp
+static bool DumpTilingData(const rtArgsEx_t &argsInfo, const string &outputDir,
+                           KernelContext::ContextConfig &config)
+{
+    auto *buff = static_cast<uint64_t *>(argsInfo.args);
+    // 两个可能的 tiling 位置（取非零者）：
+    void *tilingDataOffsetBuff  = (argsInfo.tilingDataOffset == 0) ? nullptr :
+        static_cast<void *>(buff + (argsInfo.tilingDataOffset / sizeof(uint64_t)));
+    void *tilingAddrOffsetBuff  = (argsInfo.tilingAddrOffset == 0) ? nullptr :
+        reinterpret_cast<void *>(*(buff + (argsInfo.tilingAddrOffset / sizeof(uint64_t))));
+    void *tilingBuffData = tilingDataOffsetBuff ?: tilingAddrOffsetBuff;
+
+    // 从 device 内存拷贝到 host
+    rtMemcpyOrigin(hostData, tilingDataSize, tilingBuffData, tilingDataSize,
+                   RT_MEMCPY_DEVICE_TO_HOST);
+    // 落盘为 input_tiling.bin
+    config.tilingDataPath  = outputDir + "/input_tiling.bin";
+    config.tilingDataSize  = tilingDataSize;
+}
+```
+
+> **TilingData 在 args 中的位置**
+> 算子的 args 布局为：`[input0_ptr, input1_ptr, ..., output_ptr, ..., workspace_ptr, ..., tiling_data]`
+> `tilingDataOffset` 和 `tilingAddrOffset` 标记了 tiling 数据在 args 数组中的偏移量。
+> 注意：tiling 数据最终在 **device 侧内存**（而非 host），因此需要 `rtMemcpy(D2H)`。
+
+#### (d) Kernel Args （输入数据）的落盘
+
+`DumpKernelArgs()` 中完成：
+```cpp
+bool DumpKernelArgs(const string &outputDir, uint64_t launchId, ContextConfig &config)
+{
+    auto argsInfo = launchEvents_[launchId].argsInfoCopy;
+    const auto *args = static_cast<const uint64_t *>(argsInfo.args);
+    auto &memInfo = memInfoHistory_[launchId];
+
+    // 从 args 指针读取输入地址 → 使用 rtMemcpy(D2H) 读取实际数据
+    UpdateNormalTaskArgsAddr(args, memInfo);     // 更新 addr 字段
+    DumpInputData(outputDir, memInfo.inputParamsAddrInfos, config); // 落盘
+    DumpTilingData(argsInfo, outputDir, config);  // 落盘 tiling
+    return true;
+}
+```
+
+`inputParamsAddrInfos` 中存储了每个输入/输出的设备侧地址，通过解析 `.o` 二进制的 `Attr_Section_Metadata` 段获得（`ParseMetaDataFromBinary`），运行时从 args 数组读取出实际地址后，通过 `rtMemcpyOrigin(D2H)` 将实际数据从 device 拷贝到 host 落盘。
+
+#### (e) 数据序列化 — `kernel_config.bin`
+
+所有捕获的数据最终序列化为一个 JSON 文件 `kernel_config.bin`，被 `kernel-launcher` 工具读取：
+
+```json
+{
+    "bin_path":      "<outputDir>/aicore_binary.o",
+    "block_dim":     "8",
+    "device_id":     "0",
+    "tiling_key":    "123456789",
+    "kernel_name":   "basic_matmul",
+    "magic":         "RT_DEV_BINARY_MAGIC_ELF_AICUBE",
+    "tiling_data_path": "<outputDir>/input_tiling.bin;1024",
+    "input_path":    "<outputDir>/input_0.bin;<outputDir>/input_1.bin",
+    "input_size":    "4096;4096",
+    "ffts":          "N"
+}
+```
+
+生成代码（`DumperContext::ToJson`）：
+```cpp
+jsonData["bin_path"]     = binPath;
+jsonData["block_dim"]    = to_string(blockDim);
+jsonData["kernel_name"]  = kernelName;
+jsonData["tiling_data_path"] = tilingDataPath + ";" + to_string(tilingDataSize);
+jsonData["tiling_key"]   = to_string(tilingKey);
+```
+
+#### (f) SimulatorLauncher 如何消费这些数据
+
+`SimulatorLauncher::Launch()` 在 Post 阶段被调用（仿真模式）：
+
+```cpp
+void SimulatorLauncher::Launch(const std::string &dumpPath, uint64_t launchId, bool aclNew)
+{
+    // 1. 落盘所有数据到 kernel_data/ 目录
+    KernelDumper::Instance().Dump(outputDir, launchId, aclNew);
+
+    // 2. 设置仿真环境变量
+    env["LD_PRELOAD"] = "libmsopprof_injection.so:libruntime_camodel.so";
+    env["CAMODEL_LOG_PATH_ENV"] = tmp_dump 路径;
+    env["IS_SIMULATOR_ENV"]   = "true";
+    env["DEVICE_TO_SIMULATOR"] = "true";
+
+    // 3. fork + exec kernel-launcher -c kernel_config.bin
+    execvpe("kernel-launcher", ["-c", "kernel_config.bin"], env);
+}
+```
+
+`kernel-launcher` 程序读取 `kernel_config.bin`，加载 `aicore_binary.o`、`input_tiling.bin`、input data，调用仿真器 API 执行指令模拟。
+
+#### (g) 数据路径全景总览
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  注册阶段 (rtDevBinaryRegister)                                 │
+│  rtDevBinary_t.data ─→ KernelContext.registerEvents_[].binData  │
+│                          ↓                                      │
+│                    SaveObject() → aicore_binary.o (临时路径)      │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+┌─────────────────────────────────────────────────────────────────┐
+│  Launch 阶段 (rtKernelLaunch / rtKernelLaunchWithHandleV2)      │
+│                                                                  │
+│  【直接从参数捕获】                                                │
+│  stubFunc/hdl    ─→ LaunchEvent.stubFunc / hdl (反查二进制)      │
+│  blockDim        ─→ LaunchEvent.blockDim (→ kernel_config block_dim)│
+│  tilingKey       ─→ LaunchEvent.tilingKey (→ kernel_config tiling_key)│
+│  args / argsInfo ─→ LaunchEvent.argsInfoCopy                     │
+│                                                                  │
+│  【从 device 内存读取】                                            │
+│  args[...]        ─→ DumpInputData → input_*.bin                │
+│  args[tilingOffset] → DumpTilingData → input_tiling.bin          │
+│                                                                  │
+│  【从二进制 ELF 解析】                                             │
+│  .o ELF symbols   ─→ kernelNames / kernelOffsets                 │
+│  .o ELF metadata  ─→ inputParamsAddrInfos (输入参数元信息)        │
+│                                                                  │
+│  【计算结果】                                                     │
+│  pcStartAddr      ─→ pc_start_addr.txt                           │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  序列化 → kernel_config.bin (JSON)                              │
+│  {bin_path, block_dim, tiling_key, kernel_name,                  │
+│   tiling_data_path, input_path, input_size, magic, devId}        │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  SimulatorLauncher::Launch()                                     │
+│  fork + exec kernel-launcher -c kernel_config.bin                │
+│  + 环境变量: LD_PRELOAD, CAMODEL_LOG_PATH, IS_SIMULATOR_ENV      │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  仿真器内部流程                                                   │
+│  ① 加载 aicore_binary.o 到模拟内存                                 │
+│  ② 设置 blockDim 个 AICore 模拟核                                   │
+│  ③ 填入 input data 到对应地址                                       │
+│  ④ 填入 tiling data 到 tiling buffer 地址                           │
+│  ⑤ 从 pcStartAddr 开始执行指令模拟                                   │
+│  ⑥ 生成 .dump 日志 (instr_log, reg_log, icache_log...)             │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+#### (h) 关键发现
+
+1. **TilingData 存在两种位置**：`tilingDataOffset`（tiling 数据直接嵌在 args buffer 末尾）和 `tilingAddrOffset`（args buffer 中某位置存的是 tiling 数据的 device 侧地址指针），代码中两者二选一使用。
+
+2. **Kernel Binary 只落盘一次**：`SaveObject` 在二进制注册时调用，相同的 binary handle 不会重复落盘（`binaryPathMap_` 防重）。
+
+3. **Args/Tiling 每次 launch 都落盘**：因为每次 launch 的 blockDim、input 地址可能不同，`Save` 在每次 Post 阶段调用。
+
+4. **仿真模式跳过原始 launch**：`profObj_->IsNeedRunOriginLaunch()` 为 false 时，直接跳过 `originfunc_()` 调用，真正的执行由后续 `kernel-launcher` 在 fork 子进程中完成。
+
+5. **kernel-launcher 是降级工具**：它不是一个全功能仿真器，而是一个数据加载器，通过调用 `libruntime_camodel.so` 来间接使用昇腾指令级仿真器。
+
 ## 六、关键代码位置
 
 | 功能           | 文件路径                                                                  |

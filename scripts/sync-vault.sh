@@ -1,6 +1,7 @@
 #!/bin/bash
 # Sync Obsidian Knowledge vault → Quartz content/
-# Run this after writing new notes in Obsidian, then commit & push
+# Handles nested subdirectories recursively.
+# Run after writing new notes in Obsidian, then commit & push.
 
 set -e
 
@@ -9,20 +10,18 @@ CONTENT=~/Pastens.github.io/content
 
 echo "🔄 Syncing Obsidian vault → Quartz content..."
 
-# Sync each category directory
-for dir in "$VAULT"/*/; do
-  category=$(basename "$dir")
-  target="$CONTENT/$category"
-  mkdir -p "$target"
-  cp "$dir"*.md "$target/" 2>/dev/null && echo "  ✓ $category ($(ls "$dir"*.md 2>/dev/null | wc -l) files)" || echo "  - $category (empty)"
+# Recursively copy markdown files preserving relative structure
+cd "$VAULT"
+find . -name "*.md" -type f | while IFS= read -r file; do
+  target="$CONTENT/$file"
+  mkdir -p "$(dirname "$target")"
+  cp "$VAULT/$file" "$target"
 done
 
-# Sync top-level markdown files in Knowledge
-cp "$VAULT"/*.md "$CONTENT/" 2>/dev/null
-
-echo "✅ Sync complete!"
+total=$(find "$CONTENT" -name "*.md" -type f | wc -l)
+echo "✅ Sync complete! ($total markdown files in content/)"
 echo ""
 echo "Next steps:"
-echo "  cd ~/Pastens.github.io"
+echo "  cd $CONTENT/.."
 echo "  git add content/ && git commit -m 'sync: update content from Obsidian vault'"
 echo "  git push"

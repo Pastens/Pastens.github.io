@@ -248,14 +248,14 @@ DVresult cmodelDrvMemcpy(DVdeviceptr dst, size_t destMax,
 
 ## 五、三种产品形态对比
 
-| 组件 | 真实硬件 | PvModel (旧) | CAModel (新) |
-|------|---------|-------------|-------------|
-| 驱动 | `npu_drv.so` → 硬件 ioctl | `npu_drv_pvmodel.so` → 纯软件 | `npu_drv_camodel.so` → 纯软件 |
-| 芯片模型 | 无 | `lib_pvmodel.so` (性能模型) | `libcamodel.so` (指令级模拟) |
-| 调度 | 硬件调度器 | `libtsch.so` (模拟) | `libtsch_camodel.so` (模拟) |
-| Runtime | `libruntime.so` | `libruntime_cmodel.so` | `libruntime_camodel.so` |
-| 适用场景 | 上板执行 | 快速性能评估 | 精确指令级仿真 |
-| 精度 | 真实执行 | 近似 | 指令级精确 |
+| 组件      | 真实硬件                    | PvModel (旧)                | CAModel (新)                |
+| ------- | ----------------------- | -------------------------- | -------------------------- |
+| 驱动      | `npu_drv.so` → 硬件 ioctl | `npu_drv_pvmodel.so` → 纯软件 | `npu_drv_camodel.so` → 纯软件 |
+| 芯片模型    | 无                       | `lib_pvmodel.so` (性能模型)    | `libcamodel.so` (指令级模拟)    |
+| 调度      | 硬件调度器                   | `libtsch.so` (模拟)          | `libtsch_camodel.so` (模拟)  |
+| Runtime | `libruntime.so`         | `libruntime_cmodel.so`     | `libruntime_camodel.so`    |
+| 适用场景    | 上板执行                    | 快速性能评估                     | 精确指令级仿真                    |
+| 精度      | 真实执行                    | 近似                         | 指令级精确                      |
 
 三种驱动模式由同一个源代码 `cmodel_driver/` 编译，通过不同的链接参数区分：
 - `npu_drv` — 链接 `libtsch` + `lib_pvmodel`

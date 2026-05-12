@@ -248,6 +248,8 @@ a {
       grid-area: grid-sidebar-right;
       margin-right: 0;
       flex-direction: column;
+      overflow-y: auto;
+      overscroll-behavior: contain;
       @media all and ($mobile) {
         margin-left: inherit;
         margin-right: inherit;

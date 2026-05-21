@@ -1,15 +1,14 @@
 ---
 tags:
-- 论文分析
-- chip-modeling
-- cpu-simulator
-- full-system-simulation
+  - 论文分析
+  - chip-modeling
+  - cpu-simulator
+  - full-system-simulation
 source: https://www.gem5.org/
 conference: ISCA 2011
 institutions: Michigan, Texas, Wisconsin, MIT, ARM, AMD, Google, etc.
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
-permalink: gem5
 ---
 
 # gem5: The gem5 Simulator

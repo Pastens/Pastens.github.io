@@ -1,16 +1,15 @@
 ---
 tags:
-- 论文分析
-- kv-cache
-- eviction
-- heavy-hitter
-- attention
-- neurips-2023
+  - 论文分析
+  - kv-cache
+  - eviction
+  - heavy-hitter
+  - attention
+  - neurips-2023
 source: https://arxiv.org/abs/2306.14048
 github: https://github.com/FMInference/H2O
 created: 2026-05-15
 rating: ⭐⭐⭐⭐⭐
-permalink: h2o-heavy-hitter-oracle
 ---
 
 # H2O (Heavy-Hitter Oracle)：KV Cache 逐出的奠基之作

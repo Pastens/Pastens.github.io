@@ -1,16 +1,14 @@
 ---
 tags:
-- 论文分析
-- recommendation-system
-- inference-acceleration
-- accelerator
+  - 论文分析
+  - recommendation-system
+  - inference-acceleration
+  - accelerator
 arxiv: 2010.05894
-authors: Wenqi Jiang, Zhenhao He, Shuai Zhang, Kai Zeng, Liang Feng, Jiansong Zhang,
-  Tianqi Chen, Yaoyu Zhang, Jian Zhang, Xiaodong Wang, Gustavo Alonso
+authors: Wenqi Jiang, Zhenhao He, Shuai Zhang, Kai Zeng, Liang Feng, Jiansong Zhang, Tianqi Chen, Yaoyu Zhang, Jian Zhang, Xiaodong Wang, Gustavo Alonso
 institutions: ETH Zurich
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: microrec
 ---
 
 # MicroRec: Efficient Recommendation Inference by Hardware and Data Structure Solutions

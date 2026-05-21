@@ -1,16 +1,14 @@
 ---
 tags:
-- 论文分析
-- llm-training
-- parallelism
-- pipeline-parallelism
+  - 论文分析
+  - llm-training
+  - parallelism
+  - pipeline-parallelism
 arxiv: 2102.07988
-authors: Zhuohan Li, Siyuan Zhuang, Shiyuan Guo, Danyang Zhuo, Hao Zhang, Dawn Song,
-  Ion Stoica
+authors: Zhuohan Li, Siyuan Zhuang, Shiyuan Guo, Danyang Zhuo, Hao Zhang, Dawn Song, Ion Stoica
 institutions: UC Berkeley
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: terapipe
 ---
 
 # TeraPipe: Token-Level Pipeline Parallelism for Training Large-Scale Language Models

@@ -1,16 +1,15 @@
 ---
 tags:
-- 论文分析
-- llm-inference
-- simulation
-- moe
-- disaggregation
+  - 论文分析
+  - llm-inference
+  - simulation
+  - moe
+  - disaggregation
 arxiv: 2508.03148
 authors: Yicheng Feng, Xin Tan, Kin Hang Sew, Yimin Jiang, Yibo Zhu, Hong Xu
 institutions: 香港中文大学 (CUHK), StepFun
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: frontier
 ---
 
 # Frontier: Simulating the Next Generation of LLM Inference Systems

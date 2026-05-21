@@ -1,16 +1,14 @@
 ---
 tags:
-- 论文分析
-- recommendation-system
-- distributed-training
-- gpu
+  - 论文分析
+  - recommendation-system
+  - distributed-training
+  - gpu
 arxiv: 2210.08803
-authors: Joey Wang, Yingcan Wei, Minseok Lee, Khaled Al Farisi, Wenchen Li, Swapnil
-  Joshi, Narayanan Sundaraman, Sunghwan Kim et al.
+authors: Joey Wang, Yingcan Wei, Minseok Lee, Khaled Al Farisi, Wenchen Li, Swapnil Joshi, Narayanan Sundaraman, Sunghwan Kim et al.
 institutions: NVIDIA
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: merlin-hugectr
 ---
 
 # Merlin HugeCTR: GPU-accelerated Recommender System Training and Inference

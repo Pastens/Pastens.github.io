@@ -1,27 +1,26 @@
 ---
 tags:
-- 论文分析
-- llm-inference
-- simulation
-- configuration-search
-- llm-serving
+  - 论文分析
+  - llm-inference
+  - simulation
+  - configuration-search
+  - llm-serving
 source: https://github.com/microsoft/vidur
 arxiv: 2405.05465
 authors:
-- Amey Agrawal
-- Nitin Kedia
-- Jayashree Mohan
-- Ashish Panwar
-- Nipun Kwatra
-- Bhargav Gulavani
-- Ramachandran Ramjee
-- Alexey Tumanov
+  - Amey Agrawal
+  - Nitin Kedia
+  - Jayashree Mohan
+  - Ashish Panwar
+  - Nipun Kwatra
+  - Bhargav Gulavani
+  - Ramachandran Ramjee
+  - Alexey Tumanov
 institutions:
-- Microsoft Research India
-- Georgia Institute of Technology
+  - Microsoft Research India
+  - Georgia Institute of Technology
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
-permalink: vidur
 ---
 
 # Vidur: A Large-Scale Simulation Framework For LLM Inference

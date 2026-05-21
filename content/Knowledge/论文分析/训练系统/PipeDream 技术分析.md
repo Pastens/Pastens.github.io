@@ -1,16 +1,14 @@
 ---
 tags:
-- 论文分析
-- llm-training
-- parallelism
-- pipeline-parallelism
+  - 论文分析
+  - llm-training
+  - parallelism
+  - pipeline-parallelism
 arxiv: 1806.03377
-authors: Aaron Harlap, Deepak Narayanan, Amar Phanishayee, Vivek Seshadri, Nikhil
-  Devanur, Greg R. Ganger, Phil Gibbons
+authors: Aaron Harlap, Deepak Narayanan, Amar Phanishayee, Vivek Seshadri, Nikhil Devanur, Greg R. Ganger, Phil Gibbons
 institutions: CMU, Microsoft Research
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: pipedream
 ---
 
 # PipeDream: Fast and Efficient Pipeline Parallel DNN Training

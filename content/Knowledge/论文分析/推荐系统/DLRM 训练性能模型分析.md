@@ -1,17 +1,14 @@
 ---
 tags:
-- 论文分析
-- recommendation-system
-- performance-modeling
-- dlrm
+  - 论文分析
+  - recommendation-system
+  - performance-modeling
+  - dlrm
 arxiv: 2201.07821
-authors: Zhongyi Lin, Louis Feng, Ehsan K. Ardestani, Jaewon Lee, John Moon, Chunpeng
-  Wei, Sheng Li, Hao Wu, Yuening Zhang, Jin Kyu Kim, Wenhao Jia, Dheevatsa Mudigere,
-  Maxim Naumov
+authors: Zhongyi Lin, Louis Feng, Ehsan K. Ardestani, Jaewon Lee, John Moon, Chunpeng Wei, Sheng Li, Hao Wu, Yuening Zhang, Jin Kyu Kim, Wenhao Jia, Dheevatsa Mudigere, Maxim Naumov
 institutions: Meta (Facebook)
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
-permalink: dlrm-2
 ---
 
 # Building a Performance Model for Deep Learning Recommendation Model Training on GPUs

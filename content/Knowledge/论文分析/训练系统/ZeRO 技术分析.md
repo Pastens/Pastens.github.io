@@ -1,16 +1,15 @@
 ---
 tags:
-- 论文分析
-- llm-training
-- memory-optimization
-- zero
+  - 论文分析
+  - llm-training
+  - memory-optimization
+  - zero
 source: https://github.com/microsoft/DeepSpeed
 arxiv: 1910.02054
 authors: Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, Yuxiong He
 institutions: Microsoft
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
-permalink: zero
 ---
 
 # ZeRO: Memory Optimizations Toward Training Trillion Parameter Models

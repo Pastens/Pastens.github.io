@@ -1,18 +1,16 @@
 ---
 tags:
-- 论文分析
-- transformer-architecture
-- scaling-law
-- virtual-width
-- byte-dance
-- moe
+  - 论文分析
+  - transformer-architecture
+  - scaling-law
+  - virtual-width
+  - byte-dance
+  - moe
 arxiv: 2511.11238
-authors: Seed Team (ByteDance), Baisheng Li, Banggu Wu, Bole Ma, ..., Defa Zhu, Xun
-  Zhou
+authors: Seed Team (ByteDance), Baisheng Li, Banggu Wu, Bole Ma, ..., Defa Zhu, Xun Zhou
 institutions: ByteDance Seed
 created: 2026-05-15
 rating: ⭐⭐⭐⭐⭐
-permalink: virtual-width-networks
 ---
 
 # Virtual Width Networks (VWN)：解耦表征宽度与骨干宽度的新缩放维度

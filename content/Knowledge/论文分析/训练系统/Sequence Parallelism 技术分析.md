@@ -1,15 +1,14 @@
 ---
 tags:
-- 论文分析
-- llm-training
-- sequence-parallelism
-- long-context
-arxiv: 2105.1312
+  - 论文分析
+  - llm-training
+  - sequence-parallelism
+  - long-context
+arxiv: 2105.13120
 authors: Shenggui Li, Fuzhao Xue, Chaitanya Baranwal, Yongbin Li, Yang You
 institutions: NUS, ColossalAI
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: sequence-parallelism
 ---
 
 # Sequence Parallelism: Long Sequence Training from System Perspective

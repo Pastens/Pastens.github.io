@@ -1,14 +1,13 @@
 ---
 tags:
-- 论文分析
-- llm-inference
-- survey
-- literature-review
-- simulation
-- hardware-architecture
-- performance-modeling
+  - 论文分析
+  - llm-inference
+  - survey
+  - literature-review
+  - simulation
+  - hardware-architecture
+  - performance-modeling
 created: 2026-05-09
-permalink: llm-inference-survey
 ---
 
 # LLM 推理系统深度技术综述：仿真、建模与架构设计

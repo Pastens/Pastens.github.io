@@ -1,14 +1,13 @@
 ---
 tags:
-- 论文分析
-- chip-modeling
-- roofline
-- analytical-modeling
+  - 论文分析
+  - chip-modeling
+  - roofline
+  - analytical-modeling
 conference: CACM 2009
 institutions: UC Berkeley (Samuel Williams, Andrew Waterman, David Patterson)
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
-permalink: roofline-model
 ---
 
 # Roofline Model: An Insightful Visual Performance Model

@@ -1,16 +1,14 @@
 ---
 tags:
-- 论文分析
-- llm-training
-- communication
-- collective
+  - 论文分析
+  - llm-training
+  - communication
+  - collective
 arxiv: 2111.04867
-authors: Aashaka Shah, Vijay Chidambaram, Meghan Cowan, Saeed Maleki, Madan Musuvathi,
-  Todd Mytkowicz, Jacob Nelson, Olli Saarikivi, Rachee Singh
+authors: Aashaka Shah, Vijay Chidambaram, Meghan Cowan, Saeed Maleki, Madan Musuvathi, Todd Mytkowicz, Jacob Nelson, Olli Saarikivi, Rachee Singh
 institutions: UT Austin, Microsoft
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: taccl
 ---
 
 # TACCL: Guiding Collective Algorithm Synthesis using Communication Sketches

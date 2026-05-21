@@ -1,34 +1,17 @@
 ---
 tags:
-- 论文分析
-- llm-inference
-- hardware-evaluation
-- cuda
-- gaudi
-- npu
-- isca-2025
-arxiv: 2501.0021
-authors:
-- Yunjae Lee
-- Juntaek Lim
-- Jehyeon Bang
-- Eunyeong Cho
-- Huijong Jeong
-- Taesu Kim
-- Hyungjun Kim
-- Joonhyung Lee
-- Jinseop Im
-- Ranggi Hwang
-- Se Jung Kwon
-- Dongsoo Lee
-- Minsoo Rhu
-institutions:
-- KAIST
-- NAVER Cloud
-- SqueezeBits
+  - 论文分析
+  - llm-inference
+  - hardware-evaluation
+  - cuda
+  - gaudi
+  - npu
+  - isca-2025
+arxiv: 2501.00210
+authors: [Yunjae Lee, Juntaek Lim, Jehyeon Bang, Eunyeong Cho, Huijong Jeong, Taesu Kim, Hyungjun Kim, Joonhyung Lee, Jinseop Im, Ranggi Hwang, Se Jung Kwon, Dongsoo Lee, Minsoo Rhu]
+institutions: [KAIST, NAVER Cloud, SqueezeBits]
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: debunk-cuda-myth
 ---
 
 # Debunking the CUDA Myth: 打破CUDA神话——基于GPU的AI系统公平对比：Intel Gaudi NPU与NVIDIA A100在AI模型推理中的性能与可编程性评估

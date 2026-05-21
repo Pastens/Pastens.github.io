@@ -1,16 +1,15 @@
 ---
 tags:
-- 论文分析
-- recsys
-- pim
-- processing-in-memory
-- embedding
-- accelerator
-- design-space-search
-arxiv: '2505.10748'
+  - 论文分析
+  - recsys
+  - pim
+  - processing-in-memory
+  - embedding
+  - accelerator
+  - design-space-search
+arxiv: "2505.10748"
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
-permalink: autorac-recsys-pim
 ---
 
 # AutoRAC — 自动生成推荐系统的 PIM 加速器设计

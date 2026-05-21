@@ -1,14 +1,13 @@
 ---
 tags:
-- 论文分析
-- chip-modeling
-- ml-based-modeling
-- performance-prediction
+  - 论文分析
+  - chip-modeling
+  - ml-based-modeling
+  - performance-prediction
 conference: MICRO 2018
 institutions: MIT (Larry Rudolph, Una-May O'Reilly)
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: ithemal
 ---
 
 # Ithemal: Accurate, Portable and Fast Basic Block Throughput Estimation

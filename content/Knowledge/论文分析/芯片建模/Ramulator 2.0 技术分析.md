@@ -1,16 +1,15 @@
 ---
 tags:
-- 论文分析
-- chip-modeling
-- memory-simulation
-- dram
+  - 论文分析
+  - chip-modeling
+  - memory-simulation
+  - dram
 source: https://github.com/CMU-SAFARI/ramulator2
-arxiv: 2308.1103
+arxiv: 2308.11030
 conference: IEEE CAL 2023
 institutions: CMU SAFARI, ETH Zurich
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
-permalink: ramulator-20
 ---
 
 # Ramulator 2.0: A Modern, Modular, and Extensible DRAM Simulator

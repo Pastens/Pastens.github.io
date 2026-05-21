@@ -1,39 +1,38 @@
 ---
 tags:
-- 论文分析
-- 推理系统
-- LLM推理
-- 配置优化
-- Nvidia
-- 性能建模
+  - 论文分析
+  - 推理系统
+  - LLM推理
+  - 配置优化
+  - Nvidia
+  - 性能建模
 source: https://github.com/ai-dynamo/aiconfigurator
-arxiv: '2601.06288'
+arxiv: "2601.06288"
 authors:
-- Tianhao Xu
-- Yiming Liu
-- Xianglong Lu
-- Yijia Zhao
-- Xuting Zhou
-- Aichen Feng
-- Yiyi Chen
-- Yi Shen
-- Qin Zhou
-- Xumeng Chen
-- Ilya Sherstyuk
-- Haorui Li
-- Rishi Thakkar
-- Ben Hamm
-- Yuanzhe Li
-- Xue Huang
-- Wenpeng Wu
-- Anish Shanbhag
-- Harry Kim
-- Chuan Chen
-- Junjie Lai
+  - Tianhao Xu
+  - Yiming Liu
+  - Xianglong Lu
+  - Yijia Zhao
+  - Xuting Zhou
+  - Aichen Feng
+  - Yiyi Chen
+  - Yi Shen
+  - Qin Zhou
+  - Xumeng Chen
+  - Ilya Sherstyuk
+  - Haorui Li
+  - Rishi Thakkar
+  - Ben Hamm
+  - Yuanzhe Li
+  - Xue Huang
+  - Wenpeng Wu
+  - Anish Shanbhag
+  - Harry Kim
+  - Chuan Chen
+  - Junjie Lai
 institutions: NVIDIA
 created: 2026-05-18
 rating: ⭐⭐⭐⭐⭐
-permalink: aiconfigurator
 ---
 
 # AIConfigurator：多框架 LLM 推理的闪电级配置优化

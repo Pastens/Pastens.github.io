@@ -1,16 +1,14 @@
 ---
 tags:
-- 论文分析
-- llm-training
-- memory-optimization
-- gradient-low-rank
+  - 论文分析
+  - llm-training
+  - memory-optimization
+  - gradient-low-rank
 arxiv: 2403.03507
-authors: Jiawei Zhao, Zhenyu Zhang, Beidi Chen, Zhangyang Wang, Anima Anandkumar,
-  Yuandong Tian
+authors: Jiawei Zhao, Zhenyu Zhang, Beidi Chen, Zhangyang Wang, Anima Anandkumar, Yuandong Tian
 institutions: Caltech, UT Austin, Meta AI (FAIR), MIT-IBM Watson
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
-permalink: galore
 ---
 
 # GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection

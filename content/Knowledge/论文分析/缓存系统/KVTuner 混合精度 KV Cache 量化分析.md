@@ -1,15 +1,14 @@
 ---
 tags:
-- 论文分析
-- kv-cache
-- quantization
-- mixed-precision
-- cache-compression
-- layer-wise
-arxiv: '2502.04420'
+  - 论文分析
+  - kv-cache
+  - quantization
+  - mixed-precision
+  - cache-compression
+  - layer-wise
+arxiv: "2502.04420"
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
-permalink: kvtuner-kv-cache
 ---
 
 # KVTuner — 混合精度 KV Cache 量化：层级别自动位宽选择

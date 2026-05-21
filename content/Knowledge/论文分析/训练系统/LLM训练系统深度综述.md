@@ -1,14 +1,13 @@
 ---
 tags:
-- 论文分析
-- llm-training
-- survey
-- literature-review
-- distributed-training
-- parallelism
-- memory-optimization
+  - 论文分析
+  - llm-training
+  - survey
+  - literature-review
+  - distributed-training
+  - parallelism
+  - memory-optimization
 created: 2026-05-11
-permalink: llm-training-survey
 ---
 
 # LLM 训练系统深度技术综述：并行策略、内存优化与通信架构

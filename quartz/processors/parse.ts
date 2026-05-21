@@ -106,20 +106,6 @@ export function createFileParser(ctx: BuildCtx, fps: FilePath[]) {
 
         const ast = processor.parse(file)
         const newAst = await processor.run(ast, file)
-
-        // If frontmatter has a permalink, use it as the canonical slug
-        // This enables short clean URLs without renaming files or breaking wiki links
-        if (file.data.frontmatter?.permalink) {
-          // Register the original file-path slug as an alias so old-style URLs redirect
-          const filePathSlug = file.data.slug as FullSlug
-          file.data.slug = file.data.frontmatter.permalink as FullSlug
-          if (filePathSlug !== file.data.slug) {
-            const aliases = file.data.aliases ?? []
-            aliases.push(filePathSlug)
-            file.data.aliases = aliases
-          }
-        }
-
         res.push([newAst, file])
 
         if (argv.verbose) {

@@ -1,15 +1,14 @@
 ---
 tags:
-- 论文分析
-- kv-cache
-- eviction
-- persistence-of-importance
-- cross-layer
-- icml-2024
+  - 论文分析
+  - kv-cache
+  - eviction
+  - persistence-of-importance
+  - cross-layer
+  - icml-2024
 source: https://arxiv.org/abs/2305.17118
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
-permalink: scissorhands
 ---
 
 # ScissorHands：利用层间重要性持续性的 KV Cache 逐出策略

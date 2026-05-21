@@ -1,17 +1,15 @@
 ---
 tags:
-- 论文分析
-- 训练系统
-- 性能建模仿真
-- 通信优化
+  - 论文分析
+  - 训练系统
+  - 性能建模仿真
+  - 通信优化
 arxiv: 2110.04478
-title: 'Themis: 网络带宽感知的集体通信调度策略'
-authors: Saeed Rashidi, William Won, Sudarshan Srinivasan, Srinivas Sridharan, Tushar
-  Krishna
-institutions: Georgia Institute of Technology, Intel, Meta
+title: "Themis: 网络带宽感知的集体通信调度策略"
+authors: "Saeed Rashidi, William Won, Sudarshan Srinivasan, Srinivas Sridharan, Tushar Krishna"
+institutions: "Georgia Institute of Technology, Intel, Meta"
 created: 2026-05-12
 rating: ⭐⭐⭐⭐
-permalink: themis
 ---
 
 # Themis: 网络带宽感知的集体通信调度策略

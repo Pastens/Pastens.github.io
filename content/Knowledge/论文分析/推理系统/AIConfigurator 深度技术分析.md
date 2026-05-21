@@ -360,6 +360,5 @@ AIConfigurator 的核心创新不在于单一算法突破，而在于**将算子
 
 - [[Knowledge/论文分析/推理系统/Vidur 深度技术分析]] — 另一个 LLM 推理仿真系统
 - [[Knowledge/论文分析/推理系统/Splitwise 技术分析]] — 分离式推理相关
-- vLLM 技术分析 — AIConfigurator 支持的后端之一
 - 论文: https://arxiv.org/abs/2601.06288
 - 代码: https://github.com/ai-dynamo/aiconfigurator

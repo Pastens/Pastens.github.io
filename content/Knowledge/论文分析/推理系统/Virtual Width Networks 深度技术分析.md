@@ -313,6 +313,6 @@ VWN 是一个**理论上优雅、实用上有挑战**的工作。核心贡献在
 
 ## 相关链接
 
-- [[LLM训练系统深度综述]] — 训练系统整体视角
-- [[缓存系统/HybridKV 多模态 KV Cache 压缩分析]] — 也是 ByteDance Seed 的 KV Cache 相关工作
-- [[MoE 技术分析]] — MoE 架构背景
+- [[Knowledge/论文分析/训练系统/LLM训练系统深度综述]] — 训练系统整体视角
+- [[Knowledge/论文分析/缓存系统/HybridKV 多模态 KV Cache 压缩分析]] — 也是 ByteDance Seed 的 KV Cache 相关工作
+- MoE 技术分析 — MoE 架构背景

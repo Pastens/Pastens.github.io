@@ -172,5 +172,5 @@ Flash Attention、Chunked Prefill、Speculative Decoding、Beam Search、Quantiz
 
 ## 相关笔记
 
-- [[LLM-Emu 技术分析]]
-- [[vLLM 架构分析]]
+- [[Knowledge/论文分析/推理系统/LLM-Emu 技术分析]]
+- vLLM 架构分析

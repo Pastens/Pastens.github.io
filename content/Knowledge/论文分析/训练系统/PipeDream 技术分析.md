@@ -58,6 +58,6 @@ rating: ⭐⭐⭐⭐
 ---
 
 ## 相关链接
-- [[GPipe 技术分析]]
-- [[TeraPipe 技术分析]]
-- [[LLM训练系统深度综述]]
+- [[Knowledge/论文分析/训练系统/GPipe 技术分析]]
+- [[Knowledge/论文分析/训练系统/TeraPipe 技术分析]]
+- [[Knowledge/论文分析/训练系统/LLM训练系统深度综述]]

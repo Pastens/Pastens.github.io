@@ -149,6 +149,6 @@ ScissorHands 在 H2O 和 AhaKV 之间扮演了承上启下的角色：
 - 引入**层间相关性**这一新维度（未被 AhaKV 继承，AhaKV 走的是自适应 holistic 路线）
 
 ## 相关链接
-- [[H2O Heavy-Hitter Oracle 分析]] — 基础逐出策略
-- [[AhaKV 分析]] — 自适应 holistic 逐出
-- [[缓存系统性能建模洞察分析]] — KV Cache 研究全景
+- [[Knowledge/论文分析/缓存系统/H2O Heavy-Hitter Oracle 分析]] — 基础逐出策略
+- [[Knowledge/论文分析/缓存系统/AhaKV 分析]] — 自适应 holistic 逐出
+- [[Knowledge/论文分析/缓存系统/缓存系统性能建模洞察分析]] — KV Cache 研究全景

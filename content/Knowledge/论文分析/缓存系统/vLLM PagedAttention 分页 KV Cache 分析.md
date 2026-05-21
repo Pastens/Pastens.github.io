@@ -192,6 +192,6 @@ PagedAttention 是 KV Cache 管理领域的里程碑式工作。它将 OS 虚拟
 
 ## 相关链接
 
-- [[FlexGen IO 感知 KV Cache 卸载分析]] — 将 KV Cache 卸载到 CPU DRAM + SSD
-- [[LLM in a Flash KV Cache Flash 存储分析]] — Flash 存储模型权重和 KV Cache
-- [[缓存系统性能建模洞察分析]] — KV Cache 研究全景图谱中的位置
+- [[Knowledge/论文分析/缓存系统/FlexGen IO 感知 KV Cache 卸载分析]] — 将 KV Cache 卸载到 CPU DRAM + SSD
+- [[Knowledge/论文分析/缓存系统/LLM in a Flash KV Cache Flash 存储分析]] — Flash 存储模型权重和 KV Cache
+- [[Knowledge/论文分析/缓存系统/缓存系统性能建模洞察分析]] — KV Cache 研究全景图谱中的位置

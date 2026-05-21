@@ -360,10 +360,10 @@ LLMServingSim 2.0 是 LLM 服务系统模拟领域的里程碑式工作。如果
 
 ## 相关链接
 
-- [[LLM推理系统深度综述]]
-- [[LLMServingSim 1.0 论文分析]]（原始版本）
-- [[Vidur 论文分析]]（同类系统模拟器）
-- [[TokenSim 论文分析]]
-- [[APEX 论文分析]]
-- [[ASTRA-sim 2.0]]（本工作的底层通信模拟基础）
-- [[NeuPIMs]]（本工作的 PIM 案例研究参考）
+- [[Knowledge/论文分析/推理系统/LLM推理系统深度综述]]
+- [[Knowledge/论文分析/推理系统/LLMServingSim 1.0 技术分析]]（原始版本）
+- [[Knowledge/论文分析/推理系统/Vidur 深度技术分析]]（同类系统模拟器）
+- TokenSim 论文分析
+- [[Knowledge/论文分析/推理系统/APEX 技术分析]]
+- ASTRA-sim 2.0（本工作的底层通信模拟基础）
+- NeuPIMs（本工作的 PIM 案例研究参考）

@@ -226,6 +226,6 @@ LLM in a Flash 将 KV Cache 卸载推向了**最极端的存储层级**——直
 
 ## 相关链接
 
-- [[FlexGen IO 感知 KV Cache 卸载分析]] — CPU DRAM + SSD 的两级卸载
-- [[vLLM PagedAttention 分页 KV Cache 分析]] — 高效的 HBM 管理方案
-- [[缓存系统性能建模洞察分析]] — KV Cache 研究全景图谱中的位置
+- [[Knowledge/论文分析/缓存系统/FlexGen IO 感知 KV Cache 卸载分析]] — CPU DRAM + SSD 的两级卸载
+- [[Knowledge/论文分析/缓存系统/vLLM PagedAttention 分页 KV Cache 分析]] — 高效的 HBM 管理方案
+- [[Knowledge/论文分析/缓存系统/缓存系统性能建模洞察分析]] — KV Cache 研究全景图谱中的位置

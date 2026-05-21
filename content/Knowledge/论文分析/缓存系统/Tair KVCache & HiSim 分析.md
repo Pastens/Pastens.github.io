@@ -169,6 +169,6 @@ HiSim + Optimizer 的组合恰好填补了我们之前讨论的**结构性的空
 - 业界最具对比性的工具是 **LLM-Emu**（支持 vLLM，泛化性更好）和 **Mooncake**（分布式 KV Cache 共享）
 
 ## 相关链接
-- [[缓存系统性能建模洞察分析]]
-- [[LLM-Emu 技术分析]] — 同为框架劫持路线的推理仿真器
-- [[Mooncake 技术分析]] — 分布式 KV Cache 共享系统
+- [[Knowledge/论文分析/缓存系统/缓存系统性能建模洞察分析]]
+- [[Knowledge/论文分析/推理系统/LLM-Emu 技术分析]] — 同为框架劫持路线的推理仿真器
+- [[Knowledge/论文分析/推理系统/Mooncake 技术分析]] — 分布式 KV Cache 共享系统

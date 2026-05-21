@@ -99,7 +99,7 @@ rating: ⭐⭐⭐⭐⭐
 ZeRO 的工作在 DP 框架内优雅地解决了显存瓶颈，是 LLM 训练领域引用最高的论文之一。三阶段分片思想平衡了显存-通信-吞吐，成为所有现代 LLM 训练框架的标配。唯一遗憾是尚未完全解决 AllGather 通信在超大规模集群中的开销问题。
 
 ## 相关链接
-- [[LLM训练系统深度综述]]
-- [[ZeRO-Offload 技术分析]]
-- [[ZeRO-Infinity 技术分析]]
-- [[FSDP 技术分析]]
+- [[Knowledge/论文分析/训练系统/LLM训练系统深度综述]]
+- [[Knowledge/论文分析/训练系统/ZeRO-Offload 技术分析]]
+- [[Knowledge/论文分析/训练系统/ZeRO-Infinity 技术分析]]
+- [[Knowledge/论文分析/训练系统/FSDP 技术分析]]

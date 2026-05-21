@@ -201,6 +201,6 @@ AhaKV        → 自适应保留比例 + 误差最小化
 AhaKV 代表了 KV Cache 逐出策略从**启发式规则**（Heavy Hitter / Persistence of Importance）向**优化驱动**（重建误差最小化）的演进方向。虽然当前的计算开销可能限制了实际部署，但其方法论方向（自适应 + 误差建模）可能会成为后续工作的基础。
 
 ## 相关链接
-- [[H2O Heavy-Hitter Oracle 分析]] — 逐出策略的开山之作
-- [[ScissorHands 分析]] — 跨层重要性持续性的引入
-- [[缓存系统性能建模洞察分析]] — KV Cache 研究全景图谱
+- [[Knowledge/论文分析/缓存系统/H2O Heavy-Hitter Oracle 分析]] — 逐出策略的开山之作
+- [[Knowledge/论文分析/缓存系统/ScissorHands 分析]] — 跨层重要性持续性的引入
+- [[Knowledge/论文分析/缓存系统/缓存系统性能建模洞察分析]] — KV Cache 研究全景图谱

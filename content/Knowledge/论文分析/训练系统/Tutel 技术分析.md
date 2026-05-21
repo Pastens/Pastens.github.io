@@ -47,5 +47,5 @@ Tutel 支持灵活的 EP（Expert Parallelism）组合：
 ---
 
 ## 相关链接
-- [[MiCS 技术分析]]
-- [[LLM训练系统深度综述]]
+- [[Knowledge/论文分析/训练系统/MiCS 技术分析]]
+- [[Knowledge/论文分析/训练系统/LLM训练系统深度综述]]

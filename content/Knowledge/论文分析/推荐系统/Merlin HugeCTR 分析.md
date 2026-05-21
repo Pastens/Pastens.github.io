@@ -56,5 +56,5 @@ GPU Pipeline: 接收分片 Embedding → Bottom MLP → Feature Interaction → 
 ---
 
 ## 相关链接
-- [[推荐系统/DLRM 技术分析]]
-- [[推荐系统/推荐系统性能建模综述]]
+- [[Knowledge/论文分析/推荐系统/DLRM 技术分析]]
+- [[Knowledge/论文分析/推荐系统/推荐系统性能建模综述]]

@@ -131,12 +131,12 @@ H2O 的逐出策略可以形式化为：
 ### 后续影响
 
 H2O 开启了 KV Cache 逐出的研究方向，直接催生了：
-- [[ScissorHands 分析]] — 引入 Persistence of Importance 假设，利用跨层相关性
-- [[AhaKV 分析]] — 自适应 holistic attention-guided 逐出策略
+- [[Knowledge/论文分析/缓存系统/ScissorHands 分析]] — 引入 Persistence of Importance 假设，利用跨层相关性
+- [[Knowledge/论文分析/缓存系统/AhaKV 分析]] — 自适应 holistic attention-guided 逐出策略
 - SnapKV — 基于观察窗口的逐出
 - Keyformer — Top-k 缓存的自适应版本
 
 ## 相关链接
-- [[ScissorHands 分析]]
-- [[AhaKV 分析]]
-- [[缓存系统性能建模洞察分析]] — KV Cache 研究全景图谱
+- [[Knowledge/论文分析/缓存系统/ScissorHands 分析]]
+- [[Knowledge/论文分析/缓存系统/AhaKV 分析]]
+- [[Knowledge/论文分析/缓存系统/缓存系统性能建模洞察分析]] — KV Cache 研究全景图谱

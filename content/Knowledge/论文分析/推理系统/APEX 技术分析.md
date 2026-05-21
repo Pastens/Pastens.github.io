@@ -1,23 +1,24 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - simulation
-  - parallel-strategy
-  - llm-serving
-arxiv: "2411.17651"
+- 论文分析
+- llm-inference
+- simulation
+- parallel-strategy
+- llm-serving
+arxiv: '2411.17651'
 authors:
-  - Yi-Chien Lin
-  - Woosuk Kwon
-  - Ronald Pineda
-  - Fanny Nina Paravecino
+- Yi-Chien Lin
+- Woosuk Kwon
+- Ronald Pineda
+- Fanny Nina Paravecino
 institutions:
-  - University of Southern California (USC)
-  - University of California, Berkeley
-  - University of California, Los Angeles (UCLA)
-  - Microsoft
+- University of Southern California (USC)
+- University of California, Berkeley
+- University of California, Los Angeles (UCLA)
+- Microsoft
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
+permalink: apex
 ---
 
 # APEX: 面向 LLM 服务的可扩展、感知动态性的自动化并行执行模拟器

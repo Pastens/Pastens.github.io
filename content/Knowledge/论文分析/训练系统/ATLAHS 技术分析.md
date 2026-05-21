@@ -1,15 +1,17 @@
 ---
 tags:
-  - 论文分析
-  - 训练系统
-  - 性能建模仿真
-  - 网络仿真
+- 论文分析
+- 训练系统
+- 性能建模仿真
+- 网络仿真
 arxiv: 2505.08936
-title: "ATLAHS: 以应用为中心的网络仿真工具链"
-authors: "Siyuan Shen, Tommaso Bonato, Zhiyi Hu, Pasquale Jordan, Tiancheng Chen, Torsten Hoefler"
-institutions: "ETH Zürich (SPCL)"
+title: 'ATLAHS: 以应用为中心的网络仿真工具链'
+authors: Siyuan Shen, Tommaso Bonato, Zhiyi Hu, Pasquale Jordan, Tiancheng Chen, Torsten
+  Hoefler
+institutions: ETH Zürich (SPCL)
 created: 2026-05-12
 rating: ⭐⭐⭐⭐⭐
+permalink: atlahs
 ---
 
 # ATLAHS: 以应用为中心的网络仿真工具链

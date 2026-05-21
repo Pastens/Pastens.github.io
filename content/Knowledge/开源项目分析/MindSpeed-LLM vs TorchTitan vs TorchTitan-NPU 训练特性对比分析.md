@@ -1,16 +1,17 @@
 ---
-title: "MindSpeed-LLM vs TorchTitan vs TorchTitan-NPU 训练特性对比分析"
+title: MindSpeed-LLM vs TorchTitan vs TorchTitan-NPU 训练特性对比分析
 tags:
-  - 开源项目分析
-  - 框架对比
-  - 训练系统
-  - PyTorch
-  - Ascend
-  - LLM
+- 开源项目分析
+- 框架对比
+- 训练系统
+- PyTorch
+- Ascend
+- LLM
 created: 2026-05-21
-source_mindsped: "https://gitcode.com/Ascend/MindSpeed-LLM"
-source_torchtitan: "https://gitcode.com/GitHub_Trending/to/torchtitan"
-source_torchtitan_npu: "https://github.com/hicann/torchtitan-npu"
+source_mindsped: https://gitcode.com/Ascend/MindSpeed-LLM
+source_torchtitan: https://gitcode.com/GitHub_Trending/to/torchtitan
+source_torchtitan_npu: https://github.com/hicann/torchtitan-npu
+permalink: mindspeed-llm-vs-torchtitan-vs-torchtitan-npu
 ---
 
 # MindSpeed-LLM vs TorchTitan vs TorchTitan-NPU 训练特性对比分析

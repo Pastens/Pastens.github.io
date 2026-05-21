@@ -1,34 +1,35 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - offloading
-  - io-aware
-  - cpu-dram
-  - ssd
-  - performance-model
-arxiv: "2303.06865"
+- 论文分析
+- kv-cache
+- offloading
+- io-aware
+- cpu-dram
+- ssd
+- performance-model
+arxiv: '2303.06865'
 source: https://arxiv.org/abs/2303.06865
 github: https://github.com/FMInference/FlexGen
 authors:
-  - Ying Sheng
-  - Lianmin Zheng
-  - Binhang Yuan
-  - Zhuohan Li
-  - Max Ryabinin
-  - Daniel Y. Fu
-  - Zhiqiang Xie
-  - Beidi Chen
-  - Clark Barrett
-  - Joseph E. Gonzalez
-  - Hao Zhang
-  - Ion Stoica
+- Ying Sheng
+- Lianmin Zheng
+- Binhang Yuan
+- Zhuohan Li
+- Max Ryabinin
+- Daniel Y. Fu
+- Zhiqiang Xie
+- Beidi Chen
+- Clark Barrett
+- Joseph E. Gonzalez
+- Hao Zhang
+- Ion Stoica
 institutions:
-  - Stanford University
-  - UC Berkeley
-  - Yandex
+- Stanford University
+- UC Berkeley
+- Yandex
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
+permalink: flexgen-io-kv-cache
 ---
 
 # FlexGen — IO 感知的 KV Cache 卸载与调度模型

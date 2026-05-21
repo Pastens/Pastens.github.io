@@ -1,14 +1,15 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - eviction
-  - holistic-attention
-  - adaptive-eviction
-  - reconstruction-error
+- 论文分析
+- kv-cache
+- eviction
+- holistic-attention
+- adaptive-eviction
+- reconstruction-error
 source: https://arxiv.org/abs/2410.12876
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
+permalink: ahakv
 ---
 
 # AhaKV：自适应 Holistic Attention-Guided KV Cache 逐出策略

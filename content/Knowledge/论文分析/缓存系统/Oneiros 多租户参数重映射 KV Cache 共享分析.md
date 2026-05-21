@@ -1,14 +1,15 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - cache-sharing
-  - multi-tenant
-  - parameter-remapping
-  - prefix-sharing
-arxiv: "2507.11507"
+- 论文分析
+- kv-cache
+- cache-sharing
+- multi-tenant
+- parameter-remapping
+- prefix-sharing
+arxiv: '2507.11507'
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
+permalink: oneiros-kv-cache
 ---
 
 # Oneiros — 多租户场景下通过参数重映射优化 KV Cache 共享

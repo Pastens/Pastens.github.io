@@ -1,14 +1,15 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - parallelism
-  - pytorch
+- 论文分析
+- llm-training
+- parallelism
+- pytorch
 arxiv: 2304.11277
 authors: Yanli Zhao, Andrew Gu, Rohan Varma, Min Xu, Sayed Hadi Hashemi, et al.
 institutions: Meta (PyTorch Team)
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
+permalink: fsdp
 ---
 
 # FSDP: Experiences on Scaling Fully Sharded Data Parallel

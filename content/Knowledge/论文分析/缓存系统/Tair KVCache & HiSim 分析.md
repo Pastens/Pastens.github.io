@@ -1,15 +1,16 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - inference-simulation
-  - hisim
-  - tair
-  - alibaba
-  - open-source
+- 论文分析
+- kv-cache
+- inference-simulation
+- hisim
+- tair
+- alibaba
+- open-source
 source: https://github.com/alibaba/tair-kvcache
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
+permalink: tair-kvcache-hisim
 ---
 
 # Tair KVCache & HiSim：阿里巴巴的 KVCache 管理与推理仿真系统

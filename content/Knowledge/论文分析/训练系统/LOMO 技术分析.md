@@ -1,15 +1,17 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - fine-tuning
-  - memory-optimization
-  - lomo
+- 论文分析
+- llm-training
+- fine-tuning
+- memory-optimization
+- lomo
 arxiv: 2306.09782
-authors: Kai Lv, Yuqing Yang, Tengxiao Liu, Qingyi Tao, Qiao Jin, Xin Gao, Yiming Yang
+authors: Kai Lv, Yuqing Yang, Tengxiao Liu, Qingyi Tao, Qiao Jin, Xin Gao, Yiming
+  Yang
 institutions: Tsinghua, Microsoft (original LOMO authors were from OpenNLPLab)
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
+permalink: lomo
 ---
 
 # LOMO: Full Parameter Fine-tuning for Large Language Models with Limited Resources

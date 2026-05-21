@@ -1,14 +1,15 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - cache-sharing
-  - multi-tenant
-  - network-optimization
-  - prefix-sharing
-arxiv: "2503.16525"
+- 论文分析
+- kv-cache
+- cache-sharing
+- multi-tenant
+- network-optimization
+- prefix-sharing
+arxiv: '2503.16525'
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
+permalink: gorgo-kvshare-kv-cache
 ---
 
 # GORGO / KVShare — 跨用户 KV Cache 共享：最小化网络延迟

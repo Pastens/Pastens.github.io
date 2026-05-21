@@ -1,15 +1,16 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - multimodal
-  - cache-compression
-  - token-aware
-  - visual-token
-  - sparse-cache
-arxiv: "2604.05887"
+- 论文分析
+- kv-cache
+- multimodal
+- cache-compression
+- token-aware
+- visual-token
+- sparse-cache
+arxiv: '2604.05887'
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
+permalink: hybridkv-kv-cache
 ---
 
 # HybridKV — 多模态大模型的混合 KV Cache 压缩策略

@@ -1,22 +1,23 @@
 ---
 tags:
-  - 开源项目分析
-  - 分布式训练
-  - FSDP
-  - SPMD
-  - DTensor
+- 开源项目分析
+- 分布式训练
+- FSDP
+- SPMD
+- DTensor
 source: https://github.com/volcengine/veScale
 arxiv:
-  - 2509.07003
-  - 2602.22437
+- 2509.07003
+- 2602.22437
 authors:
-  - Youjie Li
-  - Zezhou Wang
-  - Zhiqi Lin
-  - Jiacheng Yang
+- Youjie Li
+- Zezhou Wang
+- Zhiqi Lin
+- Jiacheng Yang
 institution: ByteDance Seed
 created: 2026-05-19
 rating: ⭐⭐⭐⭐⭐
+permalink: vescale
 ---
 
 # veScale 深度技术分析

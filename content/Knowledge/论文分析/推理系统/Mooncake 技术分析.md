@@ -1,30 +1,30 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - system-design
-  - pd-disaggregation
-  - kv-cache
-  - scheduling
-  - serving-system
-arxiv: "2407.00079"
+- 论文分析
+- llm-inference
+- system-design
+- pd-disaggregation
+- kv-cache
+- scheduling
+- serving-system
+arxiv: '2407.00079'
 authors:
-  - Ruoyu Qin
-  - Zheming Li
-  - Weiran He
-  - Mingxing Zhang
-  - Yongwei Wu
-  - Weimin Zheng
-  - Xinran Xu
+- Ruoyu Qin
+- Zheming Li
+- Weiran He
+- Mingxing Zhang
+- Yongwei Wu
+- Weimin Zheng
+- Xinran Xu
 institutions:
-  - Moonshot AI (月之暗面)
-  - Tsinghua University (清华大学 MadSys Lab)
+- Moonshot AI (月之暗面)
+- Tsinghua University (清华大学 MadSys Lab)
 venue: FAST 2025 Best Paper
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
 github: kvcache-ai/Mooncake (5294 stars)
 project: Kimi (kimi.moonshot.cn)
-
+permalink: mooncake
 ---
 
 # Mooncake: A KVCache-Centric Disaggregated Architecture for LLM Serving

@@ -1,15 +1,18 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - parallelism
-  - automatic-parallelism
+- 论文分析
+- llm-training
+- parallelism
+- automatic-parallelism
 source: https://github.com/alpa-proj/alpa
 arxiv: 2201.12023
-authors: Lianmin Zheng, Zhuohan Li, Hao Zhang, Yonghao Zhuang, Zhifeng Chen, Yanping Huang, Yida Wang, Yuanzhong Xu, Danyang Zhuo, Ion Stoica, Joseph E. Gonzalez, Eric P. Xing, Hao Liu
+authors: Lianmin Zheng, Zhuohan Li, Hao Zhang, Yonghao Zhuang, Zhifeng Chen, Yanping
+  Huang, Yida Wang, Yuanzhong Xu, Danyang Zhuo, Ion Stoica, Joseph E. Gonzalez, Eric
+  P. Xing, Hao Liu
 institutions: UC Berkeley, Stanford, Google, Petuum
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
+permalink: alpa
 ---
 
 # Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning

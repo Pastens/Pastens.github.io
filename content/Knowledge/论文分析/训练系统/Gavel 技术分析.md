@@ -1,15 +1,17 @@
 ---
 tags:
-  - 论文分析
-  - 训练系统
-  - 性能建模仿真
-  - 集群调度
+- 论文分析
+- 训练系统
+- 性能建模仿真
+- 集群调度
 arxiv: 2008.09213
-title: "Gavel: 异构感知集群调度策略"
-authors: "Deepak Narayanan, Keshav Santhanam, Fiodar Kazhamiaka, Amar Phanishayee, Matei Zaharia"
-institutions: "Stanford University, Microsoft Research"
+title: 'Gavel: 异构感知集群调度策略'
+authors: Deepak Narayanan, Keshav Santhanam, Fiodar Kazhamiaka, Amar Phanishayee,
+  Matei Zaharia
+institutions: Stanford University, Microsoft Research
 created: 2026-05-12
 rating: ⭐⭐⭐⭐⭐
+permalink: gavel
 ---
 
 # Gavel: 异构感知的深度学习集群调度策略

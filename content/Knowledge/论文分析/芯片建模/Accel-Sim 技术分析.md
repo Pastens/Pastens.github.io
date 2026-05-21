@@ -1,14 +1,15 @@
 ---
 tags:
-  - 论文分析
-  - chip-modeling
-  - gpu-simulator
-  - function-timing-decoupling
+- 论文分析
+- chip-modeling
+- gpu-simulator
+- function-timing-decoupling
 source: https://github.com/accel-sim/accel-sim-framework
 conference: MICRO 2020
 institutions: UBC, UTRGV
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
+permalink: accel-sim
 ---
 
 # Accel-Sim: Function-Timing Decoupled GPU Simulation

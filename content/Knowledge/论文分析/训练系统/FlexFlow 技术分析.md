@@ -1,14 +1,15 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - parallelism
-  - automatic-parallelism
+- 论文分析
+- llm-training
+- parallelism
+- automatic-parallelism
 arxiv: 1807.05358
 authors: Zhihao Jia, Matei Zaharia, Alex Aiken
 institutions: Stanford, UC Berkeley
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
+permalink: flexflow
 ---
 
 # FlexFlow: Beyond Data and Model Parallelism for Deep Neural Networks

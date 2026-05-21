@@ -1,14 +1,15 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - emulator
-  - vllm
+- 论文分析
+- llm-inference
+- emulator
+- vllm
 source: https://github.com/AKafakA/llm-emu
 arxiv: 2605.00616
 author: WEI DA
 created: 2026-05-09
 rating: ⭐⭐⭐⭐⭐
+permalink: llm-emu
 ---
 
 # LLM-Emu: Profile-Driven Online Emulation of LLM Serving Systems

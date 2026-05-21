@@ -1,15 +1,16 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - sequence-parallelism
-  - long-context
-  - ring
+- 论文分析
+- llm-training
+- sequence-parallelism
+- long-context
+- ring
 arxiv: 2310.01889
 authors: Hao Liu, Matei Zaharia, Pieter Abbeel
 institutions: UC Berkeley
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
+permalink: ring-attention
 ---
 
 # Ring Attention with Blockwise Transformers for Near-Infinite Context

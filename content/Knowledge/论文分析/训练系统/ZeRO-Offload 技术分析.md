@@ -1,15 +1,17 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - memory-optimization
-  - cpu-offload
+- 论文分析
+- llm-training
+- memory-optimization
+- cpu-offload
 source: https://github.com/microsoft/DeepSpeed
-arxiv: 2101.06840
-authors: Jie Ren, Samyam Rajbhandari, Reza Yazdani Aminabadi, Olatunji Ruwase, Shuangyan Yang, Minjia Zhang, Dong Li, Yuxiong He
+arxiv: 2101.0684
+authors: Jie Ren, Samyam Rajbhandari, Reza Yazdani Aminabadi, Olatunji Ruwase, Shuangyan
+  Yang, Minjia Zhang, Dong Li, Yuxiong He
 institutions: Microsoft
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
+permalink: zero-offload
 ---
 
 # ZeRO-Offload: Democratizing Billion-Scale Model Training

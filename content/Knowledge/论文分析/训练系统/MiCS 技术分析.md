@@ -1,14 +1,15 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - moe
-  - expert-parallelism
+- 论文分析
+- llm-training
+- moe
+- expert-parallelism
 arxiv: 2205.00119
 authors: Zhen Zhang, Shuai Zheng, Yida Wang, et al.
 institutions: Amazon Web Services (AWS)
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
+permalink: mics
 ---
 
 # MiCS: Near-linear Scaling for Training Gigantic Model on Public Cloud

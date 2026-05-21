@@ -1,15 +1,17 @@
 ---
 tags:
-  - 论文分析
-  - 训练系统
-  - 性能建模仿真
-  - 多GPU
-source: 'https://arxiv.org/abs/2404.12674'
+- 论文分析
+- 训练系统
+- 性能建模仿真
+- 多GPU
+source: https://arxiv.org/abs/2404.12674
 arxiv: '2404.12674'
-authors: 'Zhongyi Lin, Ning Sun, Pallab Bhattacharya, Xizhou Feng, Louis Feng, John D. Owens'
-institutions: 'Meta, UC Davis, AMD, NVIDIA'
+authors: Zhongyi Lin, Ning Sun, Pallab Bhattacharya, Xizhou Feng, Louis Feng, John
+  D. Owens
+institutions: Meta, UC Davis, AMD, NVIDIA
 created: 2026-05-12
 rating: ⭐⭐⭐⭐⭐
+permalink: universal-performance-model
 ---
 
 # Universal Performance Model — 多GPU训练通用性能模型

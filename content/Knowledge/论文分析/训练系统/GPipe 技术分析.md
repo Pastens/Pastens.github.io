@@ -1,14 +1,16 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - parallelism
-  - pipeline-parallelism
+- 论文分析
+- llm-training
+- parallelism
+- pipeline-parallelism
 arxiv: 1811.06965
-authors: Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Dehao Chen, Mia Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc V. Le, Yonghui Wu, Zhifeng Chen
+authors: Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Dehao Chen, Mia Chen,
+  HyoukJoong Lee, Jiquan Ngiam, Quoc V. Le, Yonghui Wu, Zhifeng Chen
 institutions: Google
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
+permalink: gpipe
 ---
 
 # GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism

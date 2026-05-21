@@ -1,16 +1,19 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - parallelism
-  - tensor-parallelism
-  - pipeline-parallelism
+- 论文分析
+- llm-training
+- parallelism
+- tensor-parallelism
+- pipeline-parallelism
 source: https://github.com/NVIDIA/Megatron-LM
 arxiv: 2104.04473
-authors: Deepak Narayanan, Mohammad Shoeybi, Jared Casper, Patrick LeGresley, Mostofa Patwary, Vijay Korthikanti, Dmitri Vainbrand, Prethvi Kashinkunti, Julie Bernauer, Bryan Catanzaro et al.
+authors: Deepak Narayanan, Mohammad Shoeybi, Jared Casper, Patrick LeGresley, Mostofa
+  Patwary, Vijay Korthikanti, Dmitri Vainbrand, Prethvi Kashinkunti, Julie Bernauer,
+  Bryan Catanzaro et al.
 institutions: NVIDIA
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
+permalink: megatron-lm
 ---
 
 # Megatron-LM: Efficient Large-Scale Language Model Training on GPU Clusters

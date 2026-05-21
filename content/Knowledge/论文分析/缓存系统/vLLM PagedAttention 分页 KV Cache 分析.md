@@ -1,29 +1,30 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - memory-management
-  - paging
-  - llm-serving
-  - oss
-arxiv: "2309.06180"
+- 论文分析
+- kv-cache
+- memory-management
+- paging
+- llm-serving
+- oss
+arxiv: '2309.06180'
 source: https://arxiv.org/abs/2309.06180
 github: https://github.com/vllm-project/vllm
 authors:
-  - Woosuk Kwon
-  - Zhuohan Li
-  - Siyuan Zhuang
-  - Ying Sheng
-  - Lianmin Zheng
-  - Cody Hao Yu
-  - Joseph E. Gonzalez
-  - Hao Zhang
-  - Ion Stoica
+- Woosuk Kwon
+- Zhuohan Li
+- Siyuan Zhuang
+- Ying Sheng
+- Lianmin Zheng
+- Cody Hao Yu
+- Joseph E. Gonzalez
+- Hao Zhang
+- Ion Stoica
 institutions:
-  - UC Berkeley
-  - Stanford University
+- UC Berkeley
+- Stanford University
 created: 2026-05-15
 rating: ⭐⭐⭐⭐⭐
+permalink: vllm-pagedattention-kv-cache
 ---
 
 # vLLM / PagedAttention — 分页 KV Cache 管理与推理系统

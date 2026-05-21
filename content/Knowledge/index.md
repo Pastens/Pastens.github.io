@@ -1,22 +1,18 @@
 ---
-title: "Pastens"
+title: "📚 知识库"
 ---
 
-# Pastens
+# 📚 知识库
 
-> AI Workload Modeling & Simulation
+> AI Workload Modeling & Simulation 相关研究、分析与学习笔记
 
-## About
+| 目录 | 说明 |
+|------|------|
+| [[Knowledge/业界动态分析/index\|业界动态分析]] | 业界最新技术动态与基础设施分析 |
+| [[Knowledge/开源项目分析/index\|开源项目分析]] | 开源项目源码级深度技术分析 |
+| [[Knowledge/论文分析/📚 论文分析目录索引\|论文分析]] | 学术论文深度技术分析笔记 |
+| [[Knowledge/性能建模仿真/📚 性能建模仿真目录索引\|性能建模仿真]] | 性能建模与仿真系统性学习路径 |
 
-Haocheng Liu. Principle Research Engineer, Fullstack.
+---
 
-9-years work experience at Huawei.
-
-Our team focuses on building a system for extra-scale cluster performance modeling & simulation. We're looking for people who have a strong willingness to face challenges and have deep understanding of computer architecture (especially the OoO processor, DSA AI accelerators and cluster-level architecture).
-
-If you'd like to know more about the position, please send your CV or question to my personal email <liuhc0121@163.com>.
-
-## 博客 / Blog
-
-- [[Knowledge/开源项目分析/index|开源项目分析]]
-- [[Knowledge/论文分析/index|论文分析]]
+> **快捷入口**: [[Knowledge/论文分析/📚 论文分析目录索引\|论文分析目录]] · [[Knowledge/性能建模仿真/📚 性能建模仿真目录索引\|性能建模仿真目录]]

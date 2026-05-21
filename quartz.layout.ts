@@ -5,7 +5,33 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.ConditionalRender({
+      component: Component.Comments({
+        provider: "giscus",
+        options: {
+          repo: "Pastens/Pastens.github.io",
+          repoId: "MDEwOlJlcG9zaXRvcnkzOTY3MDEwMzg=",
+          category: "Announcements",
+          categoryId: "DIC_kwDOF6Utbs4C9hQF",
+          mapping: "pathname",
+          strict: true,
+          reactionsEnabled: true,
+          inputPosition: "bottom",
+          lang: "zh-CN",
+        },
+      }),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        limit: 5,
+        showTags: true,
+        linkToMore: false,
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/Pastens",
@@ -38,10 +64,45 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      useSavedState: true,
+      folderClickBehavior: "link",
+      folderDefaultState: "collapsed",
+    }),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({
+      localGraph: {
+        drag: true,
+        zoom: true,
+        depth: 2,
+        scale: 1.1,
+        repelForce: 0.5,
+        centerForce: 0.3,
+        linkDistance: 30,
+        fontSize: 0.6,
+        opacityScale: 1,
+        showTags: true,
+        removeTags: [],
+        focusOnHover: true,
+        enableRadial: false,
+      },
+      globalGraph: {
+        drag: true,
+        zoom: true,
+        depth: -1,
+        scale: 0.9,
+        repelForce: 0.5,
+        centerForce: 0.2,
+        linkDistance: 30,
+        fontSize: 0.6,
+        opacityScale: 1,
+        showTags: true,
+        removeTags: [],
+        focusOnHover: true,
+        enableRadial: true,
+      },
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -62,7 +123,11 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      useSavedState: true,
+      folderClickBehavior: "link",
+      folderDefaultState: "collapsed",
+    }),
   ],
   right: [],
 }

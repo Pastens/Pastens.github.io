@@ -20,7 +20,7 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: "local",
       cdnCaching: true,
       typography: {
         header: "Noto Sans SC",
@@ -69,8 +69,17 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents({ maxDepth: 6 }),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
-      Plugin.Description(),
+      Plugin.CrawlLinks({
+        markdownLinkResolution: "shortest",
+        openLinksInNewTab: true,
+        lazyLoad: true,
+        externalLinkIcon: true,
+      }),
+      Plugin.Description({
+        descriptionLength: 200,
+        maxDescriptionLength: 400,
+        replaceExternalLinks: true,
+      }),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [Plugin.RemoveDrafts()],

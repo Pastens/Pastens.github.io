@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - memory-optimization
-  - zero
+- 论文分析
+- llm-training
+- memory-optimization
+- zero
 source: https://github.com/microsoft/DeepSpeed
 arxiv: 1910.02054
 authors: Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, Yuxiong He

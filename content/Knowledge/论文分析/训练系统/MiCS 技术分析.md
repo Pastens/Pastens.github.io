@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - moe
-  - expert-parallelism
+- 论文分析
+- llm-training
+- moe
+- expert-parallelism
 arxiv: 2205.00119
 authors: Zhen Zhang, Shuai Zheng, Yida Wang, et al.
 institutions: Amazon Web Services (AWS)

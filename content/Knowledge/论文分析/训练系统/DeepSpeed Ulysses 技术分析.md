@@ -1,12 +1,13 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - sequence-parallelism
-  - long-context
+- 论文分析
+- llm-training
+- sequence-parallelism
+- long-context
 source: https://github.com/microsoft/DeepSpeed
 arxiv: 2309.14509
-authors: Sam Ade Jacobs, Masahiro Tanaka, Chengming Zhang, Minjia Zhang, Shuaiwen Leon Song, Samyam Rajbhandari, Yuxiong He
+authors: Sam Ade Jacobs, Masahiro Tanaka, Chengming Zhang, Minjia Zhang, Shuaiwen
+  Leon Song, Samyam Rajbhandari, Yuxiong He
 institutions: Microsoft
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐

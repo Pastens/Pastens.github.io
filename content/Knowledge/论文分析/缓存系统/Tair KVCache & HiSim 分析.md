@@ -1,12 +1,12 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - inference-simulation
-  - hisim
-  - tair
-  - alibaba
-  - open-source
+- 论文分析
+- kv-cache
+- inference-simulation
+- hisim
+- tair
+- alibaba
+- open-source
 source: https://github.com/alibaba/tair-kvcache
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐

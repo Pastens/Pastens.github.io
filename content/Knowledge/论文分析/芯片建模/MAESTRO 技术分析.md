@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - chip-modeling
-  - npu-simulator
-  - dataflow
+- 论文分析
+- chip-modeling
+- npu-simulator
+- dataflow
 arxiv: 1805.02566
 conference: HPCA 2018
 institutions: Georgia Tech, NVIDIA

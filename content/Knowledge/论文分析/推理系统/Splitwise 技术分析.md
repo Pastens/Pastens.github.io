@@ -1,21 +1,21 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - system-design
-  - prefill-decode-disaggregation
+- 论文分析
+- llm-inference
+- system-design
+- prefill-decode-disaggregation
 arxiv: 2311.18677
 authors:
-  - Pratyush Patel (University of Washington / Microsoft)
-  - Esha Choukse (Microsoft)
-  - Chaojie Zhang (Microsoft)
-  - Aashaka Shah (Microsoft)
-  - Íñigo Goiri (Microsoft)
-  - Saeed Maleki (Microsoft)
-  - Ricardo Bianchini (Microsoft)
+- Pratyush Patel (University of Washington / Microsoft)
+- Esha Choukse (Microsoft)
+- Chaojie Zhang (Microsoft)
+- Aashaka Shah (Microsoft)
+- Íñigo Goiri (Microsoft)
+- Saeed Maleki (Microsoft)
+- Ricardo Bianchini (Microsoft)
 institutions:
-  - University of Washington
-  - Microsoft
+- University of Washington
+- Microsoft
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
 venue: ISCA 2024

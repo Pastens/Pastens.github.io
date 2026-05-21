@@ -1,18 +1,18 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - simulation
-  - hardware-software-co-design
+- 论文分析
+- llm-inference
+- simulation
+- hardware-software-co-design
 arxiv: 2408.05499
 authors:
-  - Jaehong Cho
-  - Minsu Kim
-  - Hyunmin Choi
-  - Guseul Heo
-  - Jongse Park
+- Jaehong Cho
+- Minsu Kim
+- Hyunmin Choi
+- Guseul Heo
+- Jongse Park
 institutions:
-  - KAIST (School of Computing, Daejeon, South Korea)
+- KAIST (School of Computing, Daejeon, South Korea)
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
 conference: IISWC 2024

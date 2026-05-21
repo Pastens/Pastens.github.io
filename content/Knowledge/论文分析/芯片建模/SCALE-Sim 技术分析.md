@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - chip-modeling
-  - npu-simulator
-  - systolic-array
+- 论文分析
+- chip-modeling
+- npu-simulator
+- systolic-array
 source: https://github.com/ARM-software/SCALE-Sim
 arxiv: 1811.02883
 institutions: Georgia Tech, ARM, NVIDIA

@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - chip-modeling
-  - power-modeling
-  - mcpat
+- 论文分析
+- chip-modeling
+- power-modeling
+- mcpat
 conference: MICRO 2008
 institutions: HP Labs, UCSB
 created: 2026-05-11

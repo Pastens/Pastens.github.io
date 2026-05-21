@@ -1,11 +1,12 @@
 ---
 tags:
-  - 论文分析
-  - 训练系统
-  - 性能建模仿真
+- 论文分析
+- 训练系统
+- 性能建模仿真
 arxiv: 2305.14516
-title: "Chakra: 基于标准化执行轨迹推进性能基准测试与协同设计"
-authors: Srinivas Sridharan, Taekyung Heo, Louis Feng, Zhaodong Wang, Matt Bergeron, Wenyin Fu, Shengbao Zheng, Brian Coutinho, Saeed Rashidi, Changhai Man, Tushar Krishna
+title: 'Chakra: 基于标准化执行轨迹推进性能基准测试与协同设计'
+authors: Srinivas Sridharan, Taekyung Heo, Louis Feng, Zhaodong Wang, Matt Bergeron,
+  Wenyin Fu, Shengbao Zheng, Brian Coutinho, Saeed Rashidi, Changhai Man, Tushar Krishna
 institutions: Meta, Georgia Institute of Technology, Hewlett Packard Enterprise
 created: 2026-05-12
 rating: ⭐⭐⭐⭐

@@ -1,13 +1,13 @@
 ---
 tags:
-  - 论文分析
-  - recsys
-  - pim
-  - processing-in-memory
-  - embedding
-  - accelerator
-  - design-space-search
-arxiv: "2505.10748"
+- 论文分析
+- recsys
+- pim
+- processing-in-memory
+- embedding
+- accelerator
+- design-space-search
+arxiv: '2505.10748'
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
 ---

@@ -1,12 +1,12 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - survey
-  - literature-review
-  - simulation
-  - hardware-architecture
-  - performance-modeling
+- 论文分析
+- llm-inference
+- survey
+- literature-review
+- simulation
+- hardware-architecture
+- performance-modeling
 created: 2026-05-09
 ---
 

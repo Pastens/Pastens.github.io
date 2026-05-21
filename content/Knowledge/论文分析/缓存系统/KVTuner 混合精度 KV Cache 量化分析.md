@@ -1,12 +1,12 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - quantization
-  - mixed-precision
-  - cache-compression
-  - layer-wise
-arxiv: "2502.04420"
+- 论文分析
+- kv-cache
+- quantization
+- mixed-precision
+- cache-compression
+- layer-wise
+arxiv: '2502.04420'
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
 ---

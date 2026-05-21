@@ -1,12 +1,13 @@
 ---
 tags:
-  - 论文分析
-  - recommendation-system
-  - deep-learning-recommendation-model
-  - dlrm
+- 论文分析
+- recommendation-system
+- deep-learning-recommendation-model
+- dlrm
 source: https://github.com/facebookresearch/dlrm
 arxiv: 1906.00091
-authors: Maxim Naumov, Dheevatsa Mudigere, Hao-Jun Michael Shi, Jianyu Huang, Narayanan Sundaraman, Jongsoo Park, Xiaodong Wang et al.
+authors: Maxim Naumov, Dheevatsa Mudigere, Hao-Jun Michael Shi, Jianyu Huang, Narayanan
+  Sundaraman, Jongsoo Park, Xiaodong Wang et al.
 institutions: Facebook (Meta)
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐

@@ -1,15 +1,31 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - hardware-evaluation
-  - cuda
-  - gaudi
-  - npu
-  - isca-2025
-arxiv: 2501.00210
-authors: [Yunjae Lee, Juntaek Lim, Jehyeon Bang, Eunyeong Cho, Huijong Jeong, Taesu Kim, Hyungjun Kim, Joonhyung Lee, Jinseop Im, Ranggi Hwang, Se Jung Kwon, Dongsoo Lee, Minsoo Rhu]
-institutions: [KAIST, NAVER Cloud, SqueezeBits]
+- 论文分析
+- llm-inference
+- hardware-evaluation
+- cuda
+- gaudi
+- npu
+- isca-2025
+arxiv: 2501.0021
+authors:
+- Yunjae Lee
+- Juntaek Lim
+- Jehyeon Bang
+- Eunyeong Cho
+- Huijong Jeong
+- Taesu Kim
+- Hyungjun Kim
+- Joonhyung Lee
+- Jinseop Im
+- Ranggi Hwang
+- Se Jung Kwon
+- Dongsoo Lee
+- Minsoo Rhu
+institutions:
+- KAIST
+- NAVER Cloud
+- SqueezeBits
 created: 2026-05-11
 rating: ⭐⭐⭐⭐
 ---

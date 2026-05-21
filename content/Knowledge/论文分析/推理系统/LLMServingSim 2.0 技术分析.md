@@ -1,19 +1,19 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - simulation
-  - hardware-software-co-design
-  - heterogeneous
-  - disaggregated-serving
+- 论文分析
+- llm-inference
+- simulation
+- hardware-software-co-design
+- heterogeneous
+- disaggregated-serving
 arxiv: 2602.23036
 authors:
-  - Jaehong Cho
-  - Hyunmin Choi
-  - Guseul Heo
-  - Jongse Park
+- Jaehong Cho
+- Hyunmin Choi
+- Guseul Heo
+- Jongse Park
 institutions:
-  - KAIST (Korea Advanced Institute of Science and Technology)
+- KAIST (Korea Advanced Institute of Science and Technology)
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐
 ---

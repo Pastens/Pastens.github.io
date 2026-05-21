@@ -1,12 +1,12 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - cache-sharing
-  - multi-tenant
-  - parameter-remapping
-  - prefix-sharing
-arxiv: "2507.11507"
+- 论文分析
+- kv-cache
+- cache-sharing
+- multi-tenant
+- parameter-remapping
+- prefix-sharing
+arxiv: '2507.11507'
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
 ---

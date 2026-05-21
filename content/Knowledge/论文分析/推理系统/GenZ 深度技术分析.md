@@ -1,10 +1,10 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - analytical-modeling
-  - hardware-architecture
-  - roofline
+- 论文分析
+- llm-inference
+- analytical-modeling
+- hardware-architecture
+- roofline
 source: https://github.com/abhibambhaniya/GenZ-LLM-Analyzer
 arxiv: 2406.01698
 authors: Abhimanyu Bambhaniya et al.

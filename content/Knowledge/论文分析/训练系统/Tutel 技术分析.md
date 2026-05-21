@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - moe
-  - expert-parallelism
+- 论文分析
+- llm-training
+- moe
+- expert-parallelism
 source: https://github.com/microsoft/tutel
 arxiv: 2206.03382
 authors: Changhoon Kim, Sehoon Kim, Dan Zhang, Song Han, Kurt Keutzer

@@ -1,13 +1,14 @@
 ---
 tags:
-  - 论文分析
-  - 训练系统
-  - 性能建模仿真
-  - 集群调度
-arxiv: 2008.12260
-title: "Pollux: 协同自适应集群调度"
-authors: "Aurick Qiao, Sang Keun Choe, Suhas Jayaram Subramanya, Willie Neiswanger, Qirong Ho, Hao Zhang, Gregory R. Ganger, Eric P. Xing"
-institutions: "Carnegie Mellon University, Petuum Inc."
+- 论文分析
+- 训练系统
+- 性能建模仿真
+- 集群调度
+arxiv: 2008.1226
+title: 'Pollux: 协同自适应集群调度'
+authors: Aurick Qiao, Sang Keun Choe, Suhas Jayaram Subramanya, Willie Neiswanger,
+  Qirong Ho, Hao Zhang, Gregory R. Ganger, Eric P. Xing
+institutions: Carnegie Mellon University, Petuum Inc.
 created: 2026-05-12
 rating: ⭐⭐⭐⭐⭐
 ---

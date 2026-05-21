@@ -1,12 +1,12 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - cache-sharing
-  - multi-tenant
-  - network-optimization
-  - prefix-sharing
-arxiv: "2503.16525"
+- 论文分析
+- kv-cache
+- cache-sharing
+- multi-tenant
+- network-optimization
+- prefix-sharing
+arxiv: '2503.16525'
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
 ---

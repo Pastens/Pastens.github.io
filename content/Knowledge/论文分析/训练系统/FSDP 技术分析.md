@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - parallelism
-  - pytorch
+- 论文分析
+- llm-training
+- parallelism
+- pytorch
 arxiv: 2304.11277
 authors: Yanli Zhao, Andrew Gu, Rohan Varma, Min Xu, Sayed Hadi Hashemi, et al.
 institutions: Meta (PyTorch Team)

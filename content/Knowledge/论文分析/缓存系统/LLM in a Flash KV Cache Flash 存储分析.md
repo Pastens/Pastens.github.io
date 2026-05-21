@@ -1,25 +1,25 @@
 ---
 tags:
-  - 论文分析
-  - kv-cache
-  - flash-storage
-  - offloading
-  - dataflow
-  - page-hit-model
-arxiv: "2312.11514"
+- 论文分析
+- kv-cache
+- flash-storage
+- offloading
+- dataflow
+- page-hit-model
+arxiv: '2312.11514'
 source: https://arxiv.org/abs/2312.11514
 authors:
-  - Keivan Alizadeh
-  - Iman Mirzadeh
-  - Dmitry Belenko
-  - S. Karen Khatamifard
-  - Minsik Cho
-  - Carlo C. Del Mundo
-  - Mohammad Rastegari
-  - Mehrdad Farajtabar
+- Keivan Alizadeh
+- Iman Mirzadeh
+- Dmitry Belenko
+- S. Karen Khatamifard
+- Minsik Cho
+- Carlo C. Del Mundo
+- Mohammad Rastegari
+- Mehrdad Farajtabar
 institutions:
-  - Microsoft Research
-  - University of Washington
+- Microsoft Research
+- University of Washington
 created: 2026-05-15
 rating: ⭐⭐⭐⭐
 ---

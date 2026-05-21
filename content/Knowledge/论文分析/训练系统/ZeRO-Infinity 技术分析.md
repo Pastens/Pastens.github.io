@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - memory-optimization
-  - nvme-offload
+- 论文分析
+- llm-training
+- memory-optimization
+- nvme-offload
 source: https://github.com/microsoft/DeepSpeed
 arxiv: 2104.07857
 authors: Samyam Rajbhandari, Olatunji Ruwase, Jeff Rasley, Shaden Smith, Yuxiong He

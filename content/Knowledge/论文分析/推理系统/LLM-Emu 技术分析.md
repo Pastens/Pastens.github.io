@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - emulator
-  - vllm
+- 论文分析
+- llm-inference
+- emulator
+- vllm
 source: https://github.com/AKafakA/llm-emu
 arxiv: 2605.00616
 author: WEI DA

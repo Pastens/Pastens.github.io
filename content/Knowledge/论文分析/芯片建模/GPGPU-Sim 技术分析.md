@@ -1,9 +1,9 @@
 ---
 tags:
-  - 论文分析
-  - chip-modeling
-  - gpu-simulator
-  - gpgpu
+- 论文分析
+- chip-modeling
+- gpu-simulator
+- gpgpu
 source: https://github.com/gpgpu-sim/gpgpu-sim_distribution
 conference: MICRO 2009
 institutions: UBC (Simon Fraser → Fatahalian)

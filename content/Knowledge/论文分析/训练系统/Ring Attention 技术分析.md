@@ -1,10 +1,10 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - sequence-parallelism
-  - long-context
-  - ring
+- 论文分析
+- llm-training
+- sequence-parallelism
+- long-context
+- ring
 arxiv: 2310.01889
 authors: Hao Liu, Matei Zaharia, Pieter Abbeel
 institutions: UC Berkeley

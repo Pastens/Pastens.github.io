@@ -1,12 +1,12 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - survey
-  - literature-review
-  - distributed-training
-  - parallelism
-  - memory-optimization
+- 论文分析
+- llm-training
+- survey
+- literature-review
+- distributed-training
+- parallelism
+- memory-optimization
 created: 2026-05-11
 ---
 

@@ -1,12 +1,13 @@
 ---
 tags:
-  - 论文分析
-  - llm-training
-  - memory-optimization
-  - communication
+- 论文分析
+- llm-training
+- memory-optimization
+- communication
 source: https://github.com/microsoft/DeepSpeed
 arxiv: 2306.10209
-authors: Guanhua Wang, Heyang Qin, Sam Jacobs, Connor Holmes, Samyam Rajbhandari, Olatunji Ruwase, Feng Yan, Yuxiong He et al.
+authors: Guanhua Wang, Heyang Qin, Sam Jacobs, Connor Holmes, Samyam Rajbhandari,
+  Olatunji Ruwase, Feng Yan, Yuxiong He et al.
 institutions: Microsoft
 created: 2026-05-11
 rating: ⭐⭐⭐⭐

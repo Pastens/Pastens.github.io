@@ -1,9 +1,20 @@
 ---
-title: "OpenAI MRC 超级计算机网络协议深度分析"
+title: OpenAI MRC 超级计算机网络协议深度分析
 date: 2026-05-21
-tags: [网络, AI基础设施, 超级计算机, 协议, OpenAI, Stargate, RDMA, RoCE, SRv6, 多路径传输]
-description: "OpenAI 联合 AMD、Broadcom、Intel、Microsoft、NVIDIA 发布的 MRC (Multipath Reliable Connection) 多路径可靠连接协议深度分析"
-source: "https://www.openai.com/index/mrc-supercomputer-networking/"
+tags:
+- 网络
+- AI基础设施
+- 超级计算机
+- 协议
+- OpenAI
+- Stargate
+- RDMA
+- RoCE
+- SRv6
+- 多路径传输
+description: OpenAI 联合 AMD、Broadcom、Intel、Microsoft、NVIDIA 发布的 MRC (Multipath Reliable
+  Connection) 多路径可靠连接协议深度分析
+source: https://www.openai.com/index/mrc-supercomputer-networking/
 ---
 
 # OpenAI MRC 超级计算机网络协议深度分析

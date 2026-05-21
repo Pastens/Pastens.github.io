@@ -1,12 +1,12 @@
 ---
 tags:
-  - 论文分析
-  - 训练系统
-  - 性能建模仿真
+- 论文分析
+- 训练系统
+- 性能建模仿真
 source: ''
 arxiv: '2407.13853'
-authors: 'Seonho Lee, Amar Phanishayee, Divya Mahajan'
-institutions: 'Georgia Institute of Technology, Meta'
+authors: Seonho Lee, Amar Phanishayee, Divya Mahajan
+institutions: Georgia Institute of Technology, Meta
 created: 2026-05-12
 rating: ⭐⭐⭐⭐⭐
 ---

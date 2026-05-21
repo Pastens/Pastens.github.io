@@ -1,21 +1,21 @@
 ---
 tags:
-  - 论文分析
-  - llm-inference
-  - system-design
-  - scheduling
-  - chunked-prefill
-  - throughput-latency-tradeoff
-arxiv: 2403.02310
+- 论文分析
+- llm-inference
+- system-design
+- scheduling
+- chunked-prefill
+- throughput-latency-tradeoff
+arxiv: 2403.0231
 authors:
-  - Amey Agrawal
-  - Nitin Kedia
-  - Ashish Panwar
-  - Jayashree Mohan
-  - Nipun Kwatra
-  - Bhargav S. Gulavani
-  - Alexey Tumanov
-  - Ramachandran Ramjee
+- Amey Agrawal
+- Nitin Kedia
+- Ashish Panwar
+- Jayashree Mohan
+- Nipun Kwatra
+- Bhargav S. Gulavani
+- Alexey Tumanov
+- Ramachandran Ramjee
 institutions: Microsoft Research India, Georgia Institute of Technology
 created: 2026-05-11
 rating: ⭐⭐⭐⭐⭐

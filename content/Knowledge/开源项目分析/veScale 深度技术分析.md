@@ -267,3 +267,4 @@ veScale 是字节跳动 Seed 团队在分布式训练领域的一次重要技术
 - 论文 1 (veScale SPMD): https://arxiv.org/abs/2509.07003
 - 论文 2 (veScale-FSDP): https://arxiv.org/abs/2602.22437
 - PyTorch DTensor: https://pytorch.org/docs/stable/distributed.tensor.html
+- 相关项目: PyTorch FSDP2, TorchTitan, Megatron-LM, DeepSpeed ZeRO

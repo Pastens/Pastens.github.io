@@ -55,6 +55,6 @@ rating: ⭐⭐⭐⭐
 ---
 
 ## 相关链接
-- [[Knowledge/论文分析/训练系统/ZeRO 技术分析]]
-- [[Knowledge/论文分析/训练系统/ZeRO-Infinity 技术分析]]
-- [[Knowledge/论文分析/训练系统/LLM训练系统深度综述]]
+- [[ZeRO 技术分析]]
+- [[ZeRO-Infinity 技术分析]]
+- [[LLM训练系统深度综述]]

@@ -328,7 +328,9 @@ LLMServingSim 填补了 LLM 推理服务领域**系统级仿真基础设施**的
 
 ## 相关链接
 
-- [[Knowledge/论文分析/推理系统/LLM推理系统深度综述]]
-- Vidur大规模LLM推理仿真框架
-- ASTRA-sim分布式AI系统仿真器
-- GeneSys端到端NPU仿真器
+- [[LLM推理系统深度综述]]
+- [[Vidur大规模LLM推理仿真框架]]
+- [[ASTRA-sim分布式AI系统仿真器]]
+- [[NeuPIMs: NPU-PIM异构加速]]
+- [[GeneSys端到端NPU仿真器]]
+- [[vLLM: PagedAttention高效内存管理]]

@@ -58,6 +58,6 @@ Ulysses 的通信与 ZeRO-3 参数 AllGather 独立可 overlap，总通信开销
 ---
 
 ## 相关链接
-- [[Knowledge/论文分析/训练系统/Sequence Parallelism 技术分析]]
-- [[Knowledge/论文分析/训练系统/Ring Attention 技术分析]]
-- [[Knowledge/论文分析/训练系统/LLM训练系统深度综述]]
+- [[Sequence Parallelism 技术分析]]
+- [[Ring Attention 技术分析]]
+- [[LLM训练系统深度综述]]

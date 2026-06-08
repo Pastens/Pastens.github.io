@@ -53,6 +53,6 @@ Causal LM（GPT 风格）的序列中，token t 的计算依赖 token 1..t-1。T
 ---
 
 ## 相关链接
-- [[Knowledge/论文分析/训练系统/GPipe 技术分析]]
-- [[Knowledge/论文分析/训练系统/PipeDream 技术分析]]
-- [[Knowledge/论文分析/训练系统/LLM训练系统深度综述]]
+- [[GPipe 技术分析]]
+- [[PipeDream 技术分析]]
+- [[LLM训练系统深度综述]]

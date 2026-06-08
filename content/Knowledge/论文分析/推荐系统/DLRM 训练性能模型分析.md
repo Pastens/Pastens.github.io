@@ -80,5 +80,5 @@ T_total = T_emb_lookup + T_emb_comm + T_bottom_mlp + T_interaction + T_top_mlp
 ---
 
 ## 相关链接
-- [[Knowledge/论文分析/推荐系统/DLRM 技术分析]]
-- [[Knowledge/论文分析/推荐系统/推荐系统性能建模综述]]
+- [[推荐系统/DLRM 技术分析]]
+- [[推荐系统/推荐系统性能建模综述]]

@@ -65,6 +65,6 @@ GPipe 的气泡率 = `(K - 1) / M`。当 M >> K 时，气泡率趋近于 0。但
 ---
 
 ## 相关链接
-- [[Knowledge/论文分析/训练系统/PipeDream 技术分析]]
-- [[Knowledge/论文分析/训练系统/TeraPipe 技术分析]]
-- [[Knowledge/论文分析/训练系统/LLM训练系统深度综述]]
+- [[PipeDream 技术分析]]
+- [[TeraPipe 技术分析]]
+- [[LLM训练系统深度综述]]

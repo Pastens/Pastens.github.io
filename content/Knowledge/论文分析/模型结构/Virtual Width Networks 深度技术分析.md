@@ -1,6 +1,7 @@
 ---
 tags:
 - 论文分析
+- 模型结构
 - transformer-architecture
 - scaling-law
 - virtual-width
@@ -68,18 +69,31 @@ MoE 通过条件计算扩展了 FFN 内部的专家数，但**骨干宽度 D 仍
 
 VWN 的核心洞察：**Embeding 查找的计算开销远小于骨干网络**，因此可以大幅扩展 Embedding 宽度而几乎不增加总计算量。
 
-```
-┌──────────────────────────────────────────────────────┐
-│  Standard Transformer                                 │
-│  Embedding(D) → Transformer Layer(D) → Output(D)     │
-│              所有层共享同一宽度 D                       │
-├──────────────────────────────────────────────────────┤
-│  Virtual Width Network (VWN)                          │
-│  Embedding(D') → VWN Layer → VWN Layer → ... → Reduce │
-│                     ↑            ↑                    │
-│               backbone: D    backbone: D               │
-│              虚拟宽度: D'=r·D   虚拟宽度: D'=r·D       │
-└──────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Standard["标准 Transformer (固定宽度)"]
+        direction TB
+        S1["Token Embedding<br/>D 维"] --> S2["Transformer 层 × L<br/>均为 D 维"] --> S3["Output<br/>D 维"]
+    end
+
+    subgraph VWN["Virtual Width Network (解耦宽度)"]
+        direction TB
+        V1["Over-Width Embedding<br/>D' = r·D 维"]
+        V1 --> V2["GHC 路由 ↓<br/>压缩到 D 维"]
+        V2 --> V3["Transformer 骨干 × L<br/>D 维 (计算量不变)"]
+        V3 --> V4["GHC 路由 ↑<br/>扩展到 D' 维"]
+        V4 --> V5["Virtual State<br/>D' = r·D 维"]
+        V5 --> V2
+        V5 --> V6["Reduce Operator<br/>D' → D"]
+        V6 --> V7["Output<br/>D 维"]
+    end
+
+    Standard -->|"瓶颈: 宽度固定"| VWN
+
+    style V2 fill:#553c9a,stroke:#9f7aea
+    style V4 fill:#553c9a,stroke:#9f7aea
+    style V5 fill:#2b6cb0,stroke:#63b3ed
+    style V6 fill:#2d3748,stroke:#48bb78
 ```
 
 **三个关键组件**：

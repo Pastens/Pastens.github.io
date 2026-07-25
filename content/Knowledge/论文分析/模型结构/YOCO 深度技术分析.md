@@ -1,8 +1,9 @@
 ---
 tags:
   - 论文分析
-  - 推理系统
+  - 模型结构
   - LLM架构
+  - Decoder-Decoder
   - KV-Cache优化
   - 长上下文
   - 微软

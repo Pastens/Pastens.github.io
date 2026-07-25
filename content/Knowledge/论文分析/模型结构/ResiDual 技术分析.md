@@ -84,7 +84,7 @@ flowchart LR
         P1 -.->|"残差"| P3
         P3 --> P4["LN"]
         P4 --> P5["xᵢ₊₁"]
-        style P3 fill:#2d3748,stroke:#718096
+        style P3 fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
     end
 
     subgraph PreLN["Pre-LN"]
@@ -94,7 +94,7 @@ flowchart LR
         Q3 --> Q4["+"]
         Q1 -.->|"残差"| Q4
         Q4 --> Q5["xᵢ₊₁"]
-        style Q4 fill:#2d3748,stroke:#718096
+        style Q4 fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
     end
 
     subgraph RD["ResiDual (PPLN)"]
@@ -107,8 +107,8 @@ flowchart LR
         R5 --> R6["LN → + (右残差)"]
         R1 -.->|"Pre-LN 残差<br/>保梯度流通"| R6
         R6 --> R7["Output"]
-        style R4 fill:#553c9a,stroke:#9f7aea
-        style R6 fill:#2b6cb0,stroke:#63b3ed
+        style R4 fill:#ede9fe,stroke:#8b5cf6,color:#4c1d95
+        style R6 fill:#fef3c7,stroke:#f59e0b,color:#78350f
     end
 
     PostLN -->|"梯度消失 ⛔"| PreLN

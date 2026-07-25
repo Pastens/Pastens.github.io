@@ -98,10 +98,10 @@ flowchart TB
         H4 -.->|"残差连接"| H7
     end
 
-    style S3 fill:#2d3748,stroke:#718096
-    style S5 fill:#2d3748,stroke:#718096
-    style H3 fill:#553c9a,stroke:#9f7aea
-    style H6 fill:#553c9a,stroke:#9f7aea
+    style S3 fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
+    style S5 fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
+    style H3 fill:#ede9fe,stroke:#8b5cf6,color:#4c1d95
+    style H6 fill:#ede9fe,stroke:#8b5cf6,color:#4c1d95
 ```
 
 **关键区别**：标准 Transformer 只有一条纯粹的恒等残差路径，而 Highway Transformer 在每个子层输出处额外插入 SDU 门控，对特征维度进行逐元素重要性调节——这就是"伪高速公路"的含义：除残差连接外，还有一条受门控控制的信息通道。

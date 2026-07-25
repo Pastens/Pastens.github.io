@@ -113,9 +113,9 @@ flowchart TB
     PostLN -->|"模型更新爆炸<br/>深层不稳定"| DeepNorm
     DeepNorm -->|"✓ 更新有界<br/>1000层稳定训练"| DeepNorm
 
-    style P3 fill:#2d3748,stroke:#718096
-    style D3 fill:#553c9a,stroke:#9f7aea
-    style D1 fill:#2b6cb0,stroke:#63b3ed
+    style P3 fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
+    style D3 fill:#fef3c7,stroke:#f59e0b,color:#78350f
+    style D1 fill:#ede9fe,stroke:#8b5cf6,color:#4c1d95
 ```
 
 **图解**：DeepNorm 与 Post-LN 的唯一区别在于残差连接乘上 α (>1) 且参数初始化缩放 β。但正是这个微小的变化，让模型更新幅度从 O(N)（随层数爆炸）降为 O(1)（与层数无关的常数）。

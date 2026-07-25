@@ -90,10 +90,10 @@ flowchart TB
 
     Standard -->|"瓶颈: 宽度固定"| VWN
 
-    style V2 fill:#553c9a,stroke:#9f7aea
-    style V4 fill:#553c9a,stroke:#9f7aea
-    style V5 fill:#2b6cb0,stroke:#63b3ed
-    style V6 fill:#2d3748,stroke:#48bb78
+    style V2 fill:#ede9fe,stroke:#8b5cf6,color:#4c1d95
+    style V4 fill:#ede9fe,stroke:#8b5cf6,color:#4c1d95
+    style V5 fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
+    style V6 fill:#d1fae5,stroke:#10b981,color:#064e3b
 ```
 
 **三个关键组件**：

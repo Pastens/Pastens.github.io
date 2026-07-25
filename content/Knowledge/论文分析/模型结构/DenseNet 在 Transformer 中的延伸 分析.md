@@ -41,7 +41,6 @@ flowchart TB
         C1 -.->|"残差"| C2
         C2 -.->|"残差"| C3
         C3 -.->|"残差"| C4
-        note1["O(L) 连接<br/>每条路径必须穿过所有中间层"]
     end
 
     subgraph Sparse["稀疏跨层连接 (残差跨层连接)"]
@@ -50,7 +49,6 @@ flowchart TB
         S1 -.->|"间隔门控"| S3
         S1 -.->|"间隔门控"| S5
         S3 -.->|"间隔门控"| S5
-        note2["~O(L) 连接<br/>+ 门控选择哪些跨层路径"]
     end
 
     subgraph Dense["密集拼接连接 (DenseNet)"]
@@ -66,7 +64,6 @@ flowchart TB
         D3 -.->|"拼接"| D4
         D3 -.->|"拼接"| D5
         D4 -.->|"拼接"| D5
-        note3["O(L²) 连接<br/>所有前层 → 当前层拼接"]
     end
 
     subgraph DWA["加权平均连接 (DenseFormer)"]
@@ -76,7 +73,6 @@ flowchart TB
         W2 -.->|"DWA 加权"| W5
         W3 -.->|"DWA 加权"| W5
         W4 -.->|"DWA 加权"| W5
-        note4["O(L²) 连接<br/>但可学习加权+软选择"]
     end
 
     Chain -->|"梯度衰减"| Sparse

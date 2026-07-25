@@ -47,35 +47,57 @@ rating: ⭐⭐⭐⭐⭐
 
 ### 2.1 架构设计
 
+```mermaid
+flowchart TB
+    subgraph Input["输入序列 x₁ x₂ ... xₙ"]
+    end
+
+    subgraph SelfDec["Self-Decoder (L/2 层)"]
+        direction TB
+        SD1["Layer 1: gRet/SWA → SwiGLU<br/>KV Cache O(1), 常数内存"]
+        SD2["Layer 2: gRet/SWA → SwiGLU"]
+        SD3["..."]
+        SD4["Layer L/2: gRet/SWA → SwiGLU"]
+        SD1 --> SD2 --> SD3 --> SD4
+    end
+
+    Input --> SelfDec
+
+    SelfDec --> Proj["Projection<br/>M = X^{L/2}<br/>K̂ = LN(M)W_K<br/>V̂ = LN(M)W_V"]
+
+    subgraph KVShare["KV 跨层共享（核心创新）"]
+        direction TB
+        KV1["K̂: [N, d]"]
+        KV2["V̂: [N, d]"]
+        KV3["仅此一份 KV Cache<br/>所有 Cross-Decoder 层共享"]
+        KV1 --- KV3
+        KV2 --- KV3
+    end
+
+    Proj --> KVShare
+
+    subgraph CrossDec["Cross-Decoder (L/2 层)"]
+        direction TB
+        CD1["Layer L/2+1: CrossAttn → SwiGLU<br/>使用同一份 K̂, V̂"]
+        CD2["Layer L/2+2: CrossAttn → SwiGLU"]
+        CD3["..."]
+        CD4["Layer L: CrossAttn → SwiGLU"]
+        CD1 --> CD2 --> CD3 --> CD4
+    end
+
+    KVShare ----> CD1
+    KVShare --> CD2
+    KVShare --> CD3
+    KVShare --> CD4
+
+    CrossDec --> Output["Output"]
+
+    style Proj fill:#ede9fe,stroke:#8b5cf6,color:#4c1d95
+    style KVShare fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
+    style CrossDec fill:#d1fae5,stroke:#10b981,color:#064e3b
 ```
-                    ┌─────────────────────────────────┐
-                    │         Cross-Decoder (L/2层)     │
-                    │  Layer L/2+1: CrossAttn→SwiGLU  │
-                    │  Layer L/2+2: CrossAttn→SwiGLU  │
-                    │  ...                             │
-                    │  Layer L:     CrossAttn→SwiGLU  │
-                    │         ↑           ↑            │
-                    │   共享 K̂, V̂   (只缓存一次)       │
-                    └─────────┬───────────────────────┘
-                              │ K̂ = LN(X^L/2)W_K
-                              │ V̂ = LN(X^L/2)W_V
-                    ┌─────────┴───────────────────────┐
-                    │    Projection (生成全局 KV)       │
-                    └─────────┬───────────────────────┘
-                              │ M = X^L/2
-                    ┌─────────┴───────────────────────┐
-                    │         Self-Decoder (L/2层)     │
-                    │  Layer 1:   ESA→SwiGLU          │
-                    │  Layer 2:   ESA→SwiGLU          │
-                    │  ...                             │
-                    │  Layer L/2: ESA→SwiGLU          │
-                    │   ESA = gRet 或 SWA             │
-                    │   (O(1) KV Cache, 常数内存)      │
-                    └─────────┬───────────────────────┘
-                              │ X^0 = Token Embeddings
-                              ▼
-                     Input Sequence x₁ x₂ ... xₙ
-```
+
+**架构核心创新 — KV 跨层共享**：Self-Decoder 每层使用 gRet/SWA（O(1) KV Cache），输出 M 被投影为一组全局 K̂, V̂。Cross-Decoder 所有 L/2 层共享**同一份** K̂, V̂——推理时只需缓存一次，Prefill 也只需计算一次 cross-attention 的 key/value。
 
 #### Self-Decoder
 

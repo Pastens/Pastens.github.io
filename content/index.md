@@ -1,16 +1,16 @@
 ---
-title: "Pastens"
+title: "Pastens • Tech Expert"
 ---
 
 # Pastens
 
-> AI Workload Modeling & Simulation
+> AI Workload Modeling & Simulation • Tech Expert
 
 ## About
 
 Haocheng Liu. Principle Research Engineer, Fullstack.
 
-9-years work experience at Huawei.
+10-years work experience at Huawei.
 
 Our team focuses on building a system for extra-scale cluster performance modeling & simulation. We're looking for people who have a strong willingness to face challenges and have deep understanding of computer architecture (especially the OoO processor, DSA AI accelerators and cluster-level architecture).
 

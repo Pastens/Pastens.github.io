@@ -1,14 +1,14 @@
 ---
-title: "Pastens • Tech Expert"
+title: "Pastens"
 ---
 
 # Pastens
 
-> AI Workload Modeling & Simulation • Tech Expert
+> AI Workload Modeling & Simulation
 
 ## About
 
-Haocheng Liu. Principle Research Engineer, Fullstack.
+Haocheng Liu. Tech Expert, Fullstack.
 
 10-years work experience at Huawei.
 

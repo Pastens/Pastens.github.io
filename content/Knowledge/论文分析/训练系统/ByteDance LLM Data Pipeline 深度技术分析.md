@@ -290,22 +290,22 @@ sequenceDiagram
 **主动热点复制机制：**
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph Before["Before: 被动应对"]
         direction LR
         A1[训练框架<br/>感知不到存储状态] --> A2[10K ranks 同时<br/>请求同一组 blocks]
-        A2 --> A3[3 个 DataNode<br/>全部饱和 ❌]
-        A3 --> A4[Gang scheduling<br/>尾延迟阻塞全集群]
+        A2 --> A3[3 个 DataNode<br/>全部饱和]
+        A3 --> A4[Gang scheduling 尾延迟<br/>阻塞全集群]
     end
 
     subgraph After["After: 主动预测"]
         direction LR
-        B1[训练框架提前通知:<br/>\"文件列表 X 即将热点\"] --> B2[存储层动态调整<br/>replication: 3→50+]
-        B2 --> B3[DataNodes<br/>负载均衡 ✅]
-        B3 --> B4[每个 rank<br/>选择最近副本 ✅]
+        B1[训练框架提前通知<br/>文件列表 X 即将热点] --> B2[存储层动态调整<br/>replication 从 3 到 50+]
+        B2 --> B3[DataNodes<br/>负载均衡]
+        B3 --> B4[每个 rank<br/>选择最近副本]
     end
 
-    Before --> After
+    A4 -.-> B1
 
     style Before fill:#fce7f3,stroke:#ec4899,color:#9d174d
     style A1 fill:#fce7f3,stroke:#ec4899,color:#9d174d
@@ -323,15 +323,15 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    Start([训练即将初始化]) --> Step1[训练框架解析<br/>checkpoint 文件列表]
-    Step1 --> Step2[发送信号给 HDFS NameNode:<br/>\"这些文件将在 10s 后成为热点\"]
-    Step2 --> Step3{NameNode 评估<br/>当前集群负载}
-    Step3 -->|低负载| High[动态提升 replication factor<br/>例: 3 → 50]
-    Step3 -->|高负载| Medium[适度提升 replication<br/>例: 3 → 20]
-    High --> Step4[DataNodes 开始<br/>后台 block 复制]
+    Start([训练即将初始化]) --> Step1[训练框架解析 checkpoint 文件列表]
+    Step1 --> Step2[发送信号给 HDFS NameNode:<br/>这些文件将在 10s 后成为热点]
+    Step2 --> Step3{NameNode 评估当前集群负载}
+    Step3 -->|低负载| High[动态提升 replication factor<br/>例: 3 增加到 50]
+    Step3 -->|高负载| Medium[适度提升 replication<br/>例: 3 增加到 20]
+    High --> Step4[DataNodes 开始后台 block 复制]
     Medium --> Step4
-    Step4 --> Step5[训练 ranks 启动<br/>→ 散列选择最近副本]
-    Step5 --> Done([初始化完成 ✅])
+    Step4 --> Step5[训练 ranks 启动<br/>散列选择最近副本]
+    Step5 --> Done([初始化完成])
 
     style Start fill:#d1fae5,stroke:#10b981,color:#064e3b
     style Step1 fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
@@ -391,26 +391,27 @@ sequenceDiagram
 ```mermaid
 flowchart TB
     subgraph Mech1["机制 1: Schedule Synchronization"]
-        M1A[训练初始化时<br/>共享 dataset ID + step progress] --> M1B[存储节点自主解析<br/>per-step info 文件]
+        M1A[训练初始化时共享<br/>dataset ID + step progress] --> M1B[存储节点自主解析<br/>per-step info 文件]
         M1B --> M1C[存储节点预先知道<br/>即将请求的数据块序列]
     end
 
+    Mech1 --> |触发| Mech2
+
     subgraph Mech2["机制 2: JIT Transformation"]
-        M2A[存储节点维护<br/>Consumer Queue] --> M2B[预读取原始数据<br/>(二进制 bytes)]
-        M2B --> M2C[执行转换图:<br/>解码→random crop→归一化→frame sampling]
+        M2A[存储节点维护<br/>Consumer Queue] --> M2B[预读取原始数据<br/>二进制 bytes]
+        M2B --> M2C[执行转换图<br/>解码 随机裁剪 归一化 帧采样]
         M2C --> M2D[GPU 计算 Step N 时<br/>存储已在准备 Step N+1]
     end
 
+    Mech2 --> |保护| Mech3
+
     subgraph Mech3["机制 3: Load-Aware Fallback"]
-        M3A[监控存储节点<br/>CPU 利用率] --> M3B{超过安全阈值<br/>80%?}
+        M3A[监控存储节点<br/>CPU 利用率] --> M3B{超过安全阈值 80 percent}
         M3B -->|是| M3C[放弃转换<br/>返回原始 bytes]
         M3B -->|否| M3D[继续 JIT 转换]
-        M3C --> M3E[训练框架检测格式<br/>(Tensor vs Binary)]
-        M3E --> M3F[Fallback 到本地处理]
+        M3C --> M3E[训练框架检测格式<br/>Tensor vs Binary]
+        M3E --> M3F[Fallback<br/>到本地处理]
     end
-
-    Mech1 --> Mech2
-    Mech2 --> Mech3
 
     style Mech1 fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
     style M1A fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a

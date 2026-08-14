@@ -431,7 +431,7 @@ flowchart TB
 - 用 **coeffects 的观察等价给 effects 提供独立性**——两个正交维度的衔接点处理得非常优雅（Theorem 42），这是论文最有理论味道的地方。
 - 元理论刻意**不依赖调度器**（规则是纯反应式的，定理对所有步序列成立），所以 Confluence 不挑调度策略。
 
-**对 DeepSeek 的指向性**：作者阵容（Shi 同时在北大与 DeepSeek-AI，Cui 在 DeepSeek-AI）与结论中的 future work 直接指向自进化 agent harness。**一个外部佐证**：Cordis v4 的 README 文档链接指向 `deepseek-harness.github.io/deepseek-harness/reference/cordis-primer`，`packages/core/README.md` 亦提及 DeepSeek——DeepSeek 正在把 Cordis 作为其 agent harness 项目的基础设施。这篇论文可以视为 DeepSeek 在"agent 自我修改的地基"上的一次理论布局：如果 agent 要能持续生成、替换、回滚自己的 harness 组件，Cordis 的恢复保证（Theorem 61/62）与依赖协调（Theorem 63/64）就是可证明的安全网。
+**对 DeepSeek 的指向性**：作者阵容（Shi 同时在北大与 DeepSeek-AI，Cui 在 DeepSeek-AI）与结论中的 future work 直接指向自进化 agent harness。**一个外部佐证**：Cordis v4 的 README 文档链接指向 `deepseek-harness.github.io/deepseek-harness/reference/cordis-primer`，`packages/core/README.md` 亦提及 DeepSeek——DeepSeek 正在把 Cordis 作为其 agent harness 项目的基础设施。后续研究发现该文档站正是 **DeepSeek Harness 平台的完整文档**（Cordis 以 vendor 方式引入，npm scope `@deepseek-ai/cordis`），是论文动机场景的生产落地，详见 [[Knowledge/业界动态分析/DeepSeek Harness 架构深度分析]]。这篇论文可以视为 DeepSeek 在"agent 自我修改的地基"上的一次理论布局：如果 agent 要能持续生成、替换、回滚自己的 harness 组件，Cordis 的恢复保证（Theorem 61/62）与依赖协调（Theorem 63/64）就是可证明的安全网。
 
 **阅读建议**：系统/工程背景读者可从 §1（动机）、§5（实现）与 §6（讨论）读起，三者都自包含；理论背景读者再补 §3/§4 的证明。§6 的讨论（系统边界、服务复用、访问控制、语言独立性、依赖类型化与版本化、与语言/OS 的协同设计）本身是一份很好的"动态组合研究议程"。
 

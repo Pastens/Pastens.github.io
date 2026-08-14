@@ -12,6 +12,7 @@ title: "业界动态分析"
 | [[Knowledge/业界动态分析/OpenAI MRC 超级计算机网络协议深度分析\|OpenAI MRC 超级计算机网络协议深度分析]] | — | 网络基础设施 |
 || [[Knowledge/业界动态分析/Meta 基础架构团队文化危机 SemiAnalysis 深度解读\|Meta 基础架构团队文化危机 SemiAnalysis 深度解读]] | 2026-07-27 | AI基础设施 |
 || [[Knowledge/业界动态分析/Kimi K3 深度技术分析\|Kimi K3 深度技术分析]] | 2026-07-29 | 模型架构/训练系统/推理系统 |
+| [[Knowledge/业界动态分析/DeepSeek Harness 架构深度分析\|DeepSeek Harness 架构深度分析]] | 2026-08-14 | Agent基础设施/编程范式 |
 
 ---
 

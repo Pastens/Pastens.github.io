@@ -389,6 +389,8 @@ flowchart TB
 
 ### 7.5 案例：Koishi
 
+> **Cordis 与 Koishi 不是同一项目**：Cordis（cordiverse org）是通用元框架，Koishi（koishijs org）是构建在 Cordis 之上的聊天机器人应用框架（论文案例研究）。两者生态深度交织——Koishi 插件就是 Cordis 组件，cordiverse 的官方包（database 等）主要服务 Koishi 场景——但框架与应用是两个 org、两个项目。Koishi 当前使用 Cordis v3，论文呈现的 Cordis v4 独立演进。
+
 - **规模**：开源聊天机器人框架，4 年开发，**4000+ 社区插件**（IM 适配器、数据库驱动、管理控制台、终端用户功能）。每个功能都是 context 原语之上的插件；Koishi 本体只贡献聊天机器人领域词汇。
 - **跨运行时复用**：Koishi 的 web console 是**第二个独立的 Cordis 应用**——同一模型在浏览器/UI 运行时复现，论证了模型既表达力强（原语足以承载完整生产系统）又通用（固定的是效应/余效应的组合方式，不是领域或运行时）。
 - **时间可组合性无认知负担**：插件作者无需写卸载路径；经由 context 的效应被自动跟踪、逆自动组合。以前靠作者自律的正确性现在由抽象一次性兑现。
@@ -429,7 +431,7 @@ flowchart TB
 - 用 **coeffects 的观察等价给 effects 提供独立性**——两个正交维度的衔接点处理得非常优雅（Theorem 42），这是论文最有理论味道的地方。
 - 元理论刻意**不依赖调度器**（规则是纯反应式的，定理对所有步序列成立），所以 Confluence 不挑调度策略。
 
-**对 DeepSeek 的指向性**：作者阵容（Shi 同时在北大与 DeepSeek-AI，Cui 在 DeepSeek-AI）与结论中的 future work 直接指向自进化 agent harness。这篇论文可以视为 DeepSeek 在"agent 自我修改的地基"上的一次理论布局——如果 agent 要能持续生成、替换、回滚自己的 harness 组件，Cordis 的恢复保证（Theorem 61/62）与依赖协调（Theorem 63/64）就是可证明的安全网。
+**对 DeepSeek 的指向性**：作者阵容（Shi 同时在北大与 DeepSeek-AI，Cui 在 DeepSeek-AI）与结论中的 future work 直接指向自进化 agent harness。**一个外部佐证**：Cordis v4 的 README 文档链接指向 `deepseek-harness.github.io/deepseek-harness/reference/cordis-primer`，`packages/core/README.md` 亦提及 DeepSeek——DeepSeek 正在把 Cordis 作为其 agent harness 项目的基础设施。这篇论文可以视为 DeepSeek 在"agent 自我修改的地基"上的一次理论布局：如果 agent 要能持续生成、替换、回滚自己的 harness 组件，Cordis 的恢复保证（Theorem 61/62）与依赖协调（Theorem 63/64）就是可证明的安全网。
 
 **阅读建议**：系统/工程背景读者可从 §1（动机）、§5（实现）与 §6（讨论）读起，三者都自包含；理论背景读者再补 §3/§4 的证明。§6 的讨论（系统边界、服务复用、访问控制、语言独立性、依赖类型化与版本化、与语言/OS 的协同设计）本身是一份很好的"动态组合研究议程"。
 

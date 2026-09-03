@@ -8,13 +8,9 @@ title: "Pastens"
 
 ## About
 
-Haocheng Liu. Tech Expert, Fullstack.
+Haocheng Liu, Performance Model & Simulation Tech Expert, FullStack and 10-years work experience at Huawei.
 
-10-years work experience at Huawei.
-
-Our team focuses on building a system for extra-scale cluster performance modeling & simulation. We're looking for people who have a strong willingness to face challenges and have deep understanding of computer architecture (especially the OoO processor, DSA AI accelerators and cluster-level architecture).
-
-If you'd like to know more about the position, please send your CV or question to my personal email <liuhc0121@163.com>.
+Contact at [liuhc0121 at 163.com](mailto:liuhc0121@163.com) if interested about me.
 
 ## 博客 / Blog
 
